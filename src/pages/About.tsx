@@ -32,14 +32,14 @@ const About = () => {
           <div className="col-span-5 flex justify-center fade-in-up-delay-3">
             <div className="relative">
               <img src={heroAiBrain} alt="AI Brain Innovation" className="w-full max-w-lg rounded-2xl parallax-float neon-glow" />
-              
+              <div className="absolute inset-0 bg-gradient-primary opacity-20 rounded-2xl"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Key Highlights */}
-      <section className="py-section relative">
+      <section className="relative py-[24px]">
         <div className="container-custom">
           <div className="grid grid-cols-4 gap-8">
             {[{
@@ -220,7 +220,7 @@ const About = () => {
           </div>
           
           <div className="grid grid-cols-2 gap-8">
-            <Card className="glass-card p-8 hover-lift fade-in-up">
+            <Card className="glass-card p-8 hover-lift fade-in-up py-[24px]">
               <div className="flex items-start gap-6">
                 <img src={itStaffingTeam} alt="IT Staffing Team" className="w-24 h-24 rounded-xl object-cover neon-glow" />
                 <div className="flex-1">
@@ -232,15 +232,12 @@ const About = () => {
                     <li>• Contract and permanent staffing solutions</li>
                     <li>• Specialized tech skill matching</li>
                   </ul>
-                  <Button variant="accent" size="sm">
-                    Explore Staffing
-                    <ArrowRight className="w-4 h-4" />
-                  </Button>
+                  
                 </div>
               </div>
             </Card>
             
-            <Card className="glass-card p-8 hover-lift fade-in-up-delay-1">
+            <Card className="glass-card p-8 hover-lift fade-in-up-delay-1 py-[24px]">
               <div className="flex items-start gap-6">
                 <img src={itConsultingLaptop} alt="IT Consulting" className="w-24 h-24 rounded-xl object-cover neon-glow" />
                 <div className="flex-1">
@@ -252,10 +249,7 @@ const About = () => {
                     <li>• Digital transformation roadmaps</li>
                     <li>• Technology architecture design</li>
                   </ul>
-                  <Button variant="accent" size="sm">
-                    Explore Consulting
-                    <ArrowRight className="w-4 h-4" />
-                  </Button>
+                  
                 </div>
               </div>
             </Card>
