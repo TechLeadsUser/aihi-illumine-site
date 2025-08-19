@@ -181,7 +181,7 @@ const About = () => {
               Our Journey
             </h2>
             <p className="text-body text-muted-foreground max-w-2xl mx-auto">
-              From humble beginnings to industry leadership, our evolution reflects our commitment to innovation and excellence.
+              From humble beginnings to industry leadership, our evolution reflects our commitment to innovation and excellence in transforming businesses through technology.
             </p>
           </div>
           
@@ -191,34 +191,34 @@ const About = () => {
               {[
                 {
                   icon: BookOpen,
-                  year: "2012",
-                  title: "Started as EdTech",
-                  desc: "Founded with a vision to revolutionize education through technology"
+                  title: "Educational Foundation",
+                  subtitle: "Building Tomorrow's Minds",
+                  desc: "We began our journey in the education technology sector, developing innovative learning platforms and digital solutions that transformed how institutions deliver knowledge. This foundation taught us the importance of user-centric design and scalable technology solutions that make complex concepts accessible to everyone."
                 },
                 {
                   icon: Users,
-                  year: "2018", 
-                  title: "Staffing Strength",
-                  desc: "Expanded into IT staffing and talent acquisition services"
+                  title: "Talent Excellence", 
+                  subtitle: "Connecting Skills with Opportunities",
+                  desc: "Recognizing the growing demand for specialized IT talent, we expanded into comprehensive staffing solutions. We built deep expertise in identifying, nurturing, and placing top-tier technology professionals across various industries, creating lasting partnerships between exceptional talent and forward-thinking organizations."
                 },
                 {
                   icon: Cog,
-                  year: "2024",
-                  title: "AI & IT Consulting",
-                  desc: "Evolved into comprehensive AI and digital transformation consultancy"
+                  title: "AI-Powered Transformation",
+                  subtitle: "The Future is Now",
+                  desc: "As artificial intelligence emerged as a game-changer, we evolved into a full-service AI and digital transformation consultancy. Today, we help organizations harness the power of AI, machine learning, and advanced analytics to revolutionize their operations, enhance customer experiences, and drive unprecedented growth."
                 }
               ].map((milestone, index) => (
-                <Card key={index} className="glass-card p-6 text-center hover-lift fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
-                  <div className="inline-flex p-4 rounded-2xl bg-gradient-primary mb-4">
-                    <milestone.icon className="w-6 h-6 text-white" />
+                <Card key={index} className="glass-card p-8 text-center hover-lift fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
+                  <div className="inline-flex p-4 rounded-2xl bg-gradient-primary mb-6">
+                    <milestone.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div className="text-xl font-poppins font-bold text-neon-blue mb-2">
-                    {milestone.year}
-                  </div>
-                  <h4 className="font-poppins font-semibold text-foreground mb-3">
+                  <h4 className="font-poppins font-bold text-foreground mb-2 text-lg">
                     {milestone.title}
                   </h4>
-                  <p className="text-muted-foreground text-sm">
+                  <div className="text-neon-blue font-medium mb-4 text-sm">
+                    {milestone.subtitle}
+                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
                     {milestone.desc}
                   </p>
                 </Card>
