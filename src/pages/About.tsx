@@ -191,21 +191,21 @@ const About = () => {
               {[
                 {
                   icon: BookOpen,
-                  title: "Oracle Education Excellence",
+                  title: "Edutech",
                   subtitle: "Empowering Careers Through Learning",
                   desc: "We began our journey as an EdTech company, providing comprehensive Oracle training classes for students and working professionals. Our mission was to bridge the skills gap by offering high-quality, industry-relevant Oracle database training that helped individuals upskill and advance their careers in the competitive technology landscape."
                 },
                 {
                   icon: Users,
-                  title: "IT Staffing Solutions", 
+                  title: "IT Staffing", 
                   subtitle: "Connecting Talent with Opportunity",
                   desc: "Building on our deep understanding of technology skills and market demands from our Oracle training experience, we naturally expanded into IT staffing. We leveraged our network of trained professionals and industry connections to provide specialized recruitment services, helping companies find the right talent while supporting professionals in finding their ideal career opportunities."
                 },
                 {
                   icon: Cog,
-                  title: "Comprehensive IT Consulting",
+                  title: "IT Consulting",
                   subtitle: "Strategic Technology Partnership",
-                  desc: "Today, we've evolved into a full-service IT consulting firm, combining our educational expertise and staffing insights with strategic technology consulting. We help organizations implement robust IT solutions, optimize their technology infrastructure, and develop comprehensive digital strategies that drive business growth and operational excellence."
+                  desc: "Today, we have evolved into a full-service IT consulting firm, combining our educational expertise and staffing insights with strategic technology consulting. We help organizations implement robust IT solutions, optimize their technology infrastructure, and develop comprehensive digital strategies that drive business growth and operational excellence."
                 }
               ].map((milestone, index) => (
                 <Card key={index} className="glass-card p-8 text-center hover-lift fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
