@@ -1,36 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { 
-  Brain, 
-  Users, 
-  Target, 
-  Shield, 
-  Compass, 
-  Telescope,
-  Rocket,
-  Heart,
-  Clock,
-  BarChart3,
-  Handshake,
-  Globe,
-  BookOpen,
-  GraduationCap,
-  Cog,
-  Laptop,
-  TrendingUp,
-  Lock,
-  LinkedinIcon,
-  ArrowRight,
-  Sparkles
-} from "lucide-react";
+import { Brain, Users, Target, Shield, Compass, Telescope, Rocket, Heart, Clock, BarChart3, Handshake, Globe, BookOpen, GraduationCap, Cog, Laptop, TrendingUp, Lock, LinkedinIcon, ArrowRight, Sparkles } from "lucide-react";
 import heroAiBrain from "@/assets/hero-ai-brain.jpg";
 import neuralPattern from "@/assets/neural-pattern.jpg";
 import itStaffingTeam from "@/assets/it-staffing-team.jpg";
 import itConsultingLaptop from "@/assets/it-consulting-laptop.jpg";
-
 const About = () => {
-  return (
-    <div className="min-h-screen bg-gradient-hero text-foreground">
+  return <div className="min-h-screen bg-gradient-hero text-foreground">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-neural opacity-30"></div>
@@ -55,11 +31,7 @@ const About = () => {
           </div>
           <div className="col-span-5 flex justify-center fade-in-up-delay-3">
             <div className="relative">
-              <img 
-                src={heroAiBrain} 
-                alt="AI Brain Innovation" 
-                className="w-full max-w-lg rounded-2xl parallax-float neon-glow"
-              />
+              <img src={heroAiBrain} alt="AI Brain Innovation" className="w-full max-w-lg rounded-2xl parallax-float neon-glow" />
               <div className="absolute inset-0 bg-gradient-primary opacity-20 rounded-2xl"></div>
             </div>
           </div>
@@ -70,34 +42,43 @@ const About = () => {
       <section className="py-section relative">
         <div className="container-custom">
           <div className="grid grid-cols-4 gap-8">
-            {[
-              { icon: Clock, stat: "12+", label: "Years Experience", delay: "fade-in-up-delay-1" },
-              { icon: BarChart3, stat: "300+", label: "Projects Delivered", delay: "fade-in-up-delay-2" },
-              { icon: Handshake, stat: "98%", label: "Client Retention", delay: "fade-in-up-delay-3" },
-              { icon: Globe, stat: "Global", label: "Delivery Model", delay: "fade-in-up-delay-4" },
-            ].map((item, index) => (
-              <Card key={index} className={`glass-card p-8 text-center hover-lift card-tilt ${item.delay}`}>
+            {[{
+            icon: Clock,
+            stat: "12+",
+            label: "Years Experience",
+            delay: "fade-in-up-delay-1"
+          }, {
+            icon: BarChart3,
+            stat: "300+",
+            label: "Projects Delivered",
+            delay: "fade-in-up-delay-2"
+          }, {
+            icon: Handshake,
+            stat: "98%",
+            label: "Client Retention",
+            delay: "fade-in-up-delay-3"
+          }, {
+            icon: Globe,
+            stat: "Global",
+            label: "Delivery Model",
+            delay: "fade-in-up-delay-4"
+          }].map((item, index) => <Card key={index} className={`glass-card p-8 text-center hover-lift card-tilt ${item.delay}`}>
                 <item.icon className="w-12 h-12 mx-auto mb-4 text-neon-blue" />
                 <div className="text-3xl font-poppins font-bold gradient-text mb-2">
                   {item.stat}
                 </div>
                 <div className="text-muted-foreground">{item.label}</div>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
 
       {/* Who We Are */}
-      <section className="py-section relative">
+      <section className="relative py-[24px]">
         <div className="container-custom">
           <div className="grid grid-cols-12 gap-12 items-center">
             <div className="col-span-6 relative">
-              <img 
-                src={neuralPattern} 
-                alt="Neural Network Pattern" 
-                className="w-full rounded-2xl neon-glow-blue"
-              />
+              <img src={neuralPattern} alt="Neural Network Pattern" className="w-full rounded-2xl neon-glow-blue" />
               <div className="absolute inset-0 bg-gradient-accent opacity-10 rounded-2xl"></div>
             </div>
             <div className="col-span-6 space-y-8 fade-in-up">
@@ -110,12 +91,19 @@ const About = () => {
                 expertise with business acumen to deliver measurable outcomes.
               </p>
               <div className="space-y-6">
-                {[
-                  { icon: Shield, title: "Secure by Design", desc: "Security-first approach in every solution" },
-                  { icon: Brain, title: "Deep Domain Expertise", desc: "Specialized knowledge across industries" },
-                  { icon: Compass, title: "Outcome-First Delivery", desc: "Results-driven project execution" },
-                ].map((item, index) => (
-                  <div key={index} className="flex items-start gap-4 fade-in-up-delay-1">
+                {[{
+                icon: Shield,
+                title: "Secure by Design",
+                desc: "Security-first approach in every solution"
+              }, {
+                icon: Brain,
+                title: "Deep Domain Expertise",
+                desc: "Specialized knowledge across industries"
+              }, {
+                icon: Compass,
+                title: "Outcome-First Delivery",
+                desc: "Results-driven project execution"
+              }].map((item, index) => <div key={index} className="flex items-start gap-4 fade-in-up-delay-1">
                     <div className="p-3 glass-card rounded-lg">
                       <item.icon className="w-6 h-6 text-neon-purple" />
                     </div>
@@ -125,8 +113,7 @@ const About = () => {
                       </h4>
                       <p className="text-muted-foreground">{item.desc}</p>
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -134,30 +121,27 @@ const About = () => {
       </section>
 
       {/* Vision Mission Values */}
-      <section className="py-section">
+      <section className="py-[24px]">
         <div className="container-custom">
           <div className="grid grid-cols-3 gap-8">
-            {[
-              {
-                icon: Telescope,
-                title: "Vision",
-                content: "To be the global leader in AI-driven business transformation, empowering organizations to achieve unprecedented growth through intelligent technology solutions.",
-                color: "neon-blue"
-              },
-              {
-                icon: Rocket,
-                title: "Mission",
-                content: "We accelerate business success by delivering innovative AI and IT solutions that transform challenges into competitive advantages through strategic consulting and implementation.",
-                color: "neon-purple"
-              },
-              {
-                icon: Heart,
-                title: "Values",
-                content: "Innovation, integrity, and excellence drive everything we do. We build lasting partnerships through transparent communication, continuous learning, and unwavering commitment to client success.",
-                color: "neon-teal"
-              }
-            ].map((item, index) => (
-              <Card key={index} className="glass-card p-8 hover-lift card-tilt fade-in-up text-center" style={{ animationDelay: `${index * 0.1}s` }}>
+            {[{
+            icon: Telescope,
+            title: "Vision",
+            content: "To be the global leader in AI-driven business transformation, empowering organizations to achieve unprecedented growth through intelligent technology solutions.",
+            color: "neon-blue"
+          }, {
+            icon: Rocket,
+            title: "Mission",
+            content: "We accelerate business success by delivering innovative AI and IT solutions that transform challenges into competitive advantages through strategic consulting and implementation.",
+            color: "neon-purple"
+          }, {
+            icon: Heart,
+            title: "Values",
+            content: "Innovation, integrity, and excellence drive everything we do. We build lasting partnerships through transparent communication, continuous learning, and unwavering commitment to client success.",
+            color: "neon-teal"
+          }].map((item, index) => <Card key={index} className="glass-card p-8 hover-lift card-tilt fade-in-up text-center" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 <div className={`inline-flex p-4 rounded-2xl glass-card mb-6 text-${item.color}`}>
                   <item.icon className="w-8 h-8" />
                 </div>
@@ -167,14 +151,13 @@ const About = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   {item.content}
                 </p>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
 
       {/* Our Journey */}
-      <section className="py-section relative">
+      <section className="relative py-[24px]">
         <div className="container-custom">
           <div className="text-center mb-16 fade-in-up">
             <h2 className="text-h2 font-poppins font-bold gradient-text mb-4">
@@ -188,27 +171,24 @@ const About = () => {
           <div className="relative">
             <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-primary rounded-full pulse-slow"></div>
             <div className="grid grid-cols-3 gap-8 relative z-10">
-              {[
-                {
-                  icon: BookOpen,
-                  title: "Edutech",
-                  subtitle: "Empowering Careers Through Learning",
-                  desc: "We began our journey as an EdTech company, providing comprehensive Oracle training classes for students and working professionals. Our mission was to bridge the skills gap by offering high-quality, industry-relevant Oracle database training that helped individuals upskill and advance their careers in the competitive technology landscape."
-                },
-                {
-                  icon: Users,
-                  title: "IT Staffing", 
-                  subtitle: "Connecting Talent with Opportunity",
-                  desc: "Building on our deep understanding of technology skills and market demands from our Oracle training experience, we naturally expanded into IT staffing. We leveraged our network of trained professionals and industry connections to provide specialized recruitment services, helping companies find the right talent while supporting professionals in finding their ideal career opportunities."
-                },
-                {
-                  icon: Cog,
-                  title: "IT Consulting",
-                  subtitle: "Strategic Technology Partnership",
-                  desc: "Today, we have evolved into a full-service IT consulting firm, combining our educational expertise and staffing insights with strategic technology consulting. We help organizations implement robust IT solutions, optimize their technology infrastructure, and develop comprehensive digital strategies that drive business growth and operational excellence."
-                }
-              ].map((milestone, index) => (
-                <Card key={index} className="glass-card p-8 text-center hover-lift fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
+              {[{
+              icon: BookOpen,
+              title: "Edutech",
+              subtitle: "Empowering Careers Through Learning",
+              desc: "We began our journey as an EdTech company, providing comprehensive Oracle training classes for students and working professionals. Our mission was to bridge the skills gap by offering high-quality, industry-relevant Oracle database training that helped individuals upskill and advance their careers in the competitive technology landscape."
+            }, {
+              icon: Users,
+              title: "IT Staffing",
+              subtitle: "Connecting Talent with Opportunity",
+              desc: "Building on our deep understanding of technology skills and market demands from our Oracle training experience, we naturally expanded into IT staffing. We leveraged our network of trained professionals and industry connections to provide specialized recruitment services, helping companies find the right talent while supporting professionals in finding their ideal career opportunities."
+            }, {
+              icon: Cog,
+              title: "IT Consulting",
+              subtitle: "Strategic Technology Partnership",
+              desc: "Today, we have evolved into a full-service IT consulting firm, combining our educational expertise and staffing insights with strategic technology consulting. We help organizations implement robust IT solutions, optimize their technology infrastructure, and develop comprehensive digital strategies that drive business growth and operational excellence."
+            }].map((milestone, index) => <Card key={index} className="glass-card p-8 text-center hover-lift fade-in-up" style={{
+              animationDelay: `${index * 0.2}s`
+            }}>
                   <div className="inline-flex p-4 rounded-2xl bg-gradient-primary mb-6">
                     <milestone.icon className="w-8 h-8 text-white" />
                   </div>
@@ -221,15 +201,14 @@ const About = () => {
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {milestone.desc}
                   </p>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </div>
       </section>
 
       {/* What We Do */}
-      <section className="py-section">
+      <section className="py-[24px]">
         <div className="container-custom">
           <div className="text-center mb-16 fade-in-up">
             <h2 className="text-h2 font-poppins font-bold gradient-text mb-4">
@@ -243,11 +222,7 @@ const About = () => {
           <div className="grid grid-cols-2 gap-8">
             <Card className="glass-card p-8 hover-lift fade-in-up">
               <div className="flex items-start gap-6">
-                <img 
-                  src={itStaffingTeam} 
-                  alt="IT Staffing Team" 
-                  className="w-24 h-24 rounded-xl object-cover neon-glow"
-                />
+                <img src={itStaffingTeam} alt="IT Staffing Team" className="w-24 h-24 rounded-xl object-cover neon-glow" />
                 <div className="flex-1">
                   <h3 className="text-h3 font-poppins font-bold gradient-text mb-4">
                     IT Staffing
@@ -267,11 +242,7 @@ const About = () => {
             
             <Card className="glass-card p-8 hover-lift fade-in-up-delay-1">
               <div className="flex items-start gap-6">
-                <img 
-                  src={itConsultingLaptop} 
-                  alt="IT Consulting" 
-                  className="w-24 h-24 rounded-xl object-cover neon-glow"
-                />
+                <img src={itConsultingLaptop} alt="IT Consulting" className="w-24 h-24 rounded-xl object-cover neon-glow" />
                 <div className="flex-1">
                   <h3 className="text-h3 font-poppins font-bold gradient-text mb-4">
                     IT Consulting
@@ -293,7 +264,7 @@ const About = () => {
       </section>
 
       {/* Leadership */}
-      <section className="py-section">
+      <section className="py-[24px]">
         <div className="container-custom">
           <div className="text-center mb-16 fade-in-up">
             <h2 className="text-h2 font-poppins font-bold gradient-text mb-4">
@@ -305,34 +276,27 @@ const About = () => {
           </div>
           
           <div className="grid grid-cols-3 gap-8">
-            {[
-              {
-                name: "Krishna",
-                role: "Chief Executive Officer",
-                bio: "Visionary leader with 15+ years in technology transformation and strategic business development.",
-                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
-              },
-              {
-                name: "Ravi",
-                role: "Operations Manager", 
-                bio: "Operations expert specializing in process optimization and large-scale project delivery management.",
-                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
-              },
-              {
-                name: "Sumesh Goutham",
-                role: "Principal Consultant",
-                bio: "Technical architect and AI specialist with deep expertise in enterprise solution design and implementation.",
-                image: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=400&h=400&fit=crop&crop=face"
-              }
-            ].map((leader, index) => (
-              <Card key={index} className="glass-card p-6 text-center hover-lift fade-in-up group" style={{ animationDelay: `${index * 0.1}s` }}>
+            {[{
+            name: "Krishna",
+            role: "Chief Executive Officer",
+            bio: "Visionary leader with 15+ years in technology transformation and strategic business development.",
+            image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+          }, {
+            name: "Ravi",
+            role: "Operations Manager",
+            bio: "Operations expert specializing in process optimization and large-scale project delivery management.",
+            image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
+          }, {
+            name: "Sumesh Goutham",
+            role: "Principal Consultant",
+            bio: "Technical architect and AI specialist with deep expertise in enterprise solution design and implementation.",
+            image: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=400&h=400&fit=crop&crop=face"
+          }].map((leader, index) => <Card key={index} className="glass-card p-6 text-center hover-lift fade-in-up group" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 <div className="relative inline-block mb-6">
                   <div className="w-24 h-24 rounded-full bg-gradient-primary p-1">
-                    <img 
-                      src={leader.image} 
-                      alt={leader.name}
-                      className="w-full h-full rounded-full object-cover"
-                    />
+                    <img src={leader.image} alt={leader.name} className="w-full h-full rounded-full object-cover" />
                   </div>
                   <div className="absolute -bottom-2 -right-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
                     <div className="p-2 bg-gradient-primary rounded-full">
@@ -349,14 +313,13 @@ const About = () => {
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   {leader.bio}
                 </p>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
 
       {/* Why AIHI */}
-      <section className="py-section">
+      <section className="py-[24px]">
         <div className="container-custom">
           <div className="text-center mb-16 fade-in-up">
             <h2 className="text-h2 font-poppins font-bold gradient-text mb-4">
@@ -368,24 +331,21 @@ const About = () => {
           </div>
           
           <div className="grid grid-cols-3 gap-8">
-            {[
-              {
-                icon: BookOpen,
-                title: "Domain Expertise",
-                desc: "Deep industry knowledge combined with cutting-edge technical skills across multiple sectors and technologies."
-              },
-              {
-                icon: TrendingUp,
-                title: "Outcome-Driven",
-                desc: "Results-focused approach with measurable KPIs and clear success metrics for every engagement."
-              },
-              {
-                icon: Lock,
-                title: "Secure & Compliant",
-                desc: "Enterprise-grade security standards and regulatory compliance built into every solution we deliver."
-              }
-            ].map((pillar, index) => (
-              <Card key={index} className="glass-card p-8 text-center hover-lift card-tilt fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+            {[{
+            icon: BookOpen,
+            title: "Domain Expertise",
+            desc: "Deep industry knowledge combined with cutting-edge technical skills across multiple sectors and technologies."
+          }, {
+            icon: TrendingUp,
+            title: "Outcome-Driven",
+            desc: "Results-focused approach with measurable KPIs and clear success metrics for every engagement."
+          }, {
+            icon: Lock,
+            title: "Secure & Compliant",
+            desc: "Enterprise-grade security standards and regulatory compliance built into every solution we deliver."
+          }].map((pillar, index) => <Card key={index} className="glass-card p-8 text-center hover-lift card-tilt fade-in-up" style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 <div className="inline-flex p-4 rounded-2xl bg-gradient-accent mb-6">
                   <pillar.icon className="w-8 h-8 text-white" />
                 </div>
@@ -395,8 +355,7 @@ const About = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   {pillar.desc}
                 </p>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -471,8 +430,6 @@ const About = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default About;
