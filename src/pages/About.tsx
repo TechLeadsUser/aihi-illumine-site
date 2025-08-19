@@ -387,8 +387,8 @@ const About = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-16 border-t border-card-border">
-        <div className="container-custom">
+      <footer className="border-t border-card-border py-[24px]">
+        <div className="container-custom py-[2px]">
           <div className="grid grid-cols-4 gap-8 mb-12">
             <div>
               <h4 className="font-poppins font-bold text-foreground mb-4">Company</h4>
