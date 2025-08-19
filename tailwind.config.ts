@@ -18,14 +18,27 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'poppins': ['Poppins', 'sans-serif'],
+				'inter': ['Inter', 'sans-serif'],
+			},
+			fontSize: {
+				'h1': 'var(--font-h1)',
+				'h2': 'var(--font-h2)',
+				'h3': 'var(--font-h3)',
+				'body': 'var(--font-body)',
+				'small': 'var(--font-small)',
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
+				'background-gradient': 'hsl(var(--background-gradient))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
+					end: 'hsl(var(--primary-end))',
 					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
@@ -42,7 +55,14 @@ export default {
 				},
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
+					end: 'hsl(var(--accent-end))',
 					foreground: 'hsl(var(--accent-foreground))'
+				},
+				neon: {
+					blue: 'hsl(var(--neon-blue))',
+					purple: 'hsl(var(--neon-purple))',
+					cyan: 'hsl(var(--neon-cyan))',
+					teal: 'hsl(var(--neon-teal))',
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
@@ -50,23 +70,29 @@ export default {
 				},
 				card: {
 					DEFAULT: 'hsl(var(--card))',
-					foreground: 'hsl(var(--card-foreground))'
-				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+					foreground: 'hsl(var(--card-foreground))',
+					border: 'hsl(var(--card-border))'
 				}
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-accent': 'var(--gradient-accent)',
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-neural': 'var(--gradient-neural)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			boxShadow: {
+				'glow-primary': '0 0 20px hsl(var(--glow-primary))',
+				'glow-accent': '0 0 20px hsl(var(--glow-accent))',
+				'glass': '0 8px 32px rgba(0, 0, 0, 0.1)',
+			},
+			spacing: {
+				'section': '8rem',
+				'container': '5rem',
 			},
 			keyframes: {
 				'accordion-down': {
