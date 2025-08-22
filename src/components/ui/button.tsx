@@ -16,11 +16,12 @@ const buttonVariants = cva(
         ghost: "hover:bg-secondary hover:text-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         // Premium variants for AIHI
-        hero: "bg-gradient-primary text-white font-semibold shadow-glow-primary hover:shadow-glow-primary hover:scale-105 transform transition-all duration-300",
+        hero: "gradient-cta text-white font-semibold shadow-glow-primary hover:shadow-glow-primary hover:scale-105 transform transition-all duration-300",
         "hero-outline": "bg-transparent border-2 border-white/20 text-white backdrop-blur-sm hover:bg-white/10 hover:border-white/40 transition-all duration-300",
         glass: "bg-white/5 backdrop-blur-md border border-white/20 text-white hover:bg-white/10 hover:border-white/30 transition-all duration-300",
         accent: "bg-gradient-accent text-white font-semibold shadow-glow-accent hover:shadow-glow-accent hover:scale-105 transform transition-all duration-300",
         neon: "bg-transparent border border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-background hover:shadow-glow-primary transition-all duration-300",
+        gradient: "gradient-cta text-white font-semibold hover:scale-105 transform transition-all duration-300",
       },
       size: {
         default: "h-12 px-6 py-3",

@@ -20,7 +20,7 @@ const About = () => {
               We bridge the gap between technology potential and business reality.
             </p>
             <div className="flex gap-4">
-              <Button variant="hero" size="lg" className="fade-in-up-delay-1">
+              <Button variant="gradient" size="lg" className="fade-in-up-delay-1">
                 Start Your Journey
                 <ArrowRight className="w-5 h-5" />
               </Button>
@@ -490,7 +490,7 @@ const About = () => {
               <Button variant="hero-outline" size="lg">
                 Schedule Consultation
               </Button>
-              <Button variant="glass" size="lg">
+              <Button variant="gradient" size="lg">
                 Contact Sales Team
                 <ArrowRight className="w-5 h-5" />
               </Button>

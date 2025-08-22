@@ -67,10 +67,12 @@
     --font-small: 0.875rem; /* 14px */
     
     /* Gradients */
-    --gradient-primary: linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(var(--primary-end)) 100%);
-    --gradient-accent: linear-gradient(90deg, hsl(var(--accent)) 0%, hsl(var(--accent-end)) 100%);
+    --gradient-primary: linear-gradient(135deg, #6366f1 0%, #14b8a6 100%);
+    --gradient-accent: linear-gradient(90deg, #8b5cf6 0%, #06b6d4 100%);
     --gradient-hero: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--background-gradient)) 100%);
     --gradient-neural: linear-gradient(45deg, hsl(var(--neon-purple) / 0.1) 0%, hsl(var(--neon-teal) / 0.1) 100%);
+    --gradient-text: linear-gradient(135deg, #6366f1 0%, #14b8a6 100%);
+    --gradient-cta: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -105,10 +107,22 @@
   
   /* Gradient Text */
   .gradient-text {
-    background: var(--gradient-primary);
+    background: var(--gradient-text);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  
+  /* CTA Gradient Button */
+  .gradient-cta {
+    background: var(--gradient-cta);
+    color: white;
+    border: none;
+  }
+  
+  .gradient-cta:hover {
+    background: linear-gradient(135deg, #7c3aed 0%, #0891b2 100%);
+    transform: translateY(-2px);
   }
   
   /* Neon Glow */

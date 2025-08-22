@@ -79,6 +79,8 @@ export default {
 				'gradient-accent': 'var(--gradient-accent)',
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-neural': 'var(--gradient-neural)',
+				'gradient-text': 'var(--gradient-text)',
+				'gradient-cta': 'var(--gradient-cta)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
