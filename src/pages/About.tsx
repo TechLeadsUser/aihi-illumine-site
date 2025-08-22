@@ -490,23 +490,23 @@ const About = () => {
       </section>
 
       {/* CTA Banner */}
-      <section className="relative h-[220px] flex items-center">
+      <section className="py-section relative">
         <div className="absolute inset-0 bg-gradient-primary opacity-90"></div>
         <ScrollAnimation animation="scale-in" className="container-custom relative z-10 text-center">
           <div className="max-w-4xl mx-auto">
-            <Sparkles className="w-16 h-16 mx-auto mb-6 text-white" />
-            <h2 className="text-h2 font-poppins font-bold text-white mb-4">
+            
+            <h2 className="font-poppins font-bold text-white mb-4 text-2xl">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-body text-white/90 mb-8 leading-relaxed">
+            <p className="text-white/90 mb-8 leading-relaxed text-sm">
               Join hundreds of forward-thinking organizations that trust AIHI to drive their digital transformation journey. 
               Let's explore how we can accelerate your success.
             </p>
             <div className="flex gap-4 justify-center">
-              <Button variant="hero-outline" size="lg">
+              <Button variant="hero-outline" size="lg" className="text-sm font-semibold">
                 Schedule Consultation
               </Button>
-              <Button variant="gradient" size="lg">
+              <Button variant="gradient" size="lg" className="text-sm font-medium">
                 Contact Sales Team
                 <ArrowRight className="w-5 h-5" />
               </Button>
