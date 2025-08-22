@@ -77,11 +77,11 @@ const About = () => {
       <section className="relative py-[24px]">
         <div className="container-custom">
           <div className="grid grid-cols-12 gap-12 items-center">
-            <div className="col-span-6 relative">
-              <img src={neuralPattern} alt="Neural Network Pattern" className="w-full rounded-2xl neon-glow-blue" />
+            <div className="col-span-6 relative slide-in-left">
+              <img src={neuralPattern} alt="Neural Network Pattern" className="w-full rounded-2xl neon-glow-green" />
               <div className="absolute inset-0 bg-gradient-accent opacity-10 rounded-2xl"></div>
             </div>
-            <div className="col-span-6 space-y-8 fade-in-up">
+            <div className="col-span-6 space-y-8 slide-in-right">
               <h2 className="text-h2 font-poppins font-bold gradient-text">
                 Who We Are
               </h2>
@@ -128,19 +128,22 @@ const About = () => {
             icon: Telescope,
             title: "Vision",
             content: "To be the global leader in AI-driven business transformation, empowering organizations to achieve unprecedented growth through intelligent technology solutions.",
-            color: "neon-blue"
+            color: "neon-purple",
+            animation: "flip-in"
           }, {
             icon: Rocket,
             title: "Mission",
             content: "We accelerate business success by delivering innovative AI and IT solutions that transform challenges into competitive advantages through strategic consulting and implementation.",
-            color: "neon-purple"
+            color: "neon-teal",
+            animation: "zoom-in"
           }, {
             icon: Heart,
             title: "Values",
             content: "Innovation, integrity, and excellence drive everything we do. We build lasting partnerships through transparent communication, continuous learning, and unwavering commitment to client success.",
-            color: "neon-teal"
-          }].map((item, index) => <Card key={index} className="glass-card p-8 hover-lift card-tilt fade-in-up text-center" style={{
-            animationDelay: `${index * 0.1}s`
+            color: "neon-cyan",
+            animation: "rotate-in"
+          }].map((item, index) => <Card key={index} className={`glass-card p-8 hover-lift card-tilt ${item.animation} text-center`} style={{
+            animationDelay: `${index * 0.2}s`
           }}>
                 <div className={`inline-flex p-4 rounded-2xl glass-card mb-6 text-${item.color}`}>
                   <item.icon className="w-8 h-8" />
@@ -159,7 +162,7 @@ const About = () => {
       {/* Our Journey */}
       <section className="relative py-[24px]">
         <div className="container-custom">
-          <div className="text-center mb-16 fade-in-up">
+          <div className="text-center mb-16 zoom-in">
             <h2 className="text-h2 font-poppins font-bold gradient-text mb-4">
               Our Journey
             </h2>
@@ -186,8 +189,8 @@ const About = () => {
               title: "IT Consulting",
               subtitle: "Strategic Technology Partnership",
               desc: "Today, we have evolved into a full-service IT consulting firm, combining our educational expertise and staffing insights with strategic technology consulting. We help organizations implement robust IT solutions, optimize their technology infrastructure, and develop comprehensive digital strategies that drive business growth and operational excellence."
-            }].map((milestone, index) => <Card key={index} className="glass-card p-8 text-center hover-lift fade-in-up" style={{
-              animationDelay: `${index * 0.2}s`
+            }].map((milestone, index) => <Card key={index} className={`glass-card p-8 text-center hover-lift ${index % 2 === 0 ? 'slide-in-left' : 'slide-in-right'}`} style={{
+              animationDelay: `${index * 0.3}s`
             }}>
                   <div className="inline-flex p-4 rounded-2xl bg-gradient-primary mb-6">
                     <milestone.icon className="w-8 h-8 text-white" />
@@ -210,7 +213,7 @@ const About = () => {
       {/* What We Do */}
       <section className="py-[24px]">
         <div className="container-custom">
-          <div className="text-center mb-16 fade-in-up">
+          <div className="text-center mb-16 flip-in">
             <h2 className="text-h2 font-poppins font-bold gradient-text mb-4">
               What We Do
             </h2>
@@ -220,7 +223,7 @@ const About = () => {
           </div>
           
           <div className="grid grid-cols-2 gap-8">
-            <Card className="glass-card p-8 hover-lift fade-in-up py-[24px]">
+            <Card className="glass-card p-8 hover-lift slide-in-left py-[24px]">
               <div className="flex items-start gap-6">
                 <img src={itStaffingTeam} alt="IT Staffing Team" className="w-24 h-24 rounded-xl object-cover neon-glow" />
                 <div className="flex-1">
@@ -237,7 +240,7 @@ const About = () => {
               </div>
             </Card>
             
-            <Card className="glass-card p-8 hover-lift fade-in-up-delay-1 py-[24px]">
+            <Card className="glass-card p-8 hover-lift slide-in-right py-[24px]" style={{ animationDelay: '0.3s' }}>
               <div className="flex items-start gap-6">
                 <img src={itConsultingLaptop} alt="IT Consulting" className="w-24 h-24 rounded-xl object-cover neon-glow" />
                 <div className="flex-1">
@@ -260,7 +263,7 @@ const About = () => {
       {/* Leadership */}
       <section className="py-[24px]">
         <div className="container-custom">
-          <div className="text-center mb-16 fade-in-up">
+          <div className="text-center mb-16 rotate-in">
             <h2 className="text-h2 font-poppins font-bold gradient-text mb-4">
               Leadership Team
             </h2>
@@ -285,8 +288,8 @@ const About = () => {
             role: "Principal Consultant",
             bio: "Technical architect and AI specialist with deep expertise in enterprise solution design and implementation.",
             image: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=400&h=400&fit=crop&crop=face"
-          }].map((leader, index) => <Card key={index} className="glass-card p-6 text-center hover-lift fade-in-up group" style={{
-            animationDelay: `${index * 0.1}s`
+            }].map((leader, index) => <Card key={index} className="glass-card p-6 text-center hover-lift zoom-in group" style={{
+            animationDelay: `${index * 0.2}s`
           }}>
                 <div className="relative inline-block mb-6">
                   <div className="w-24 h-24 rounded-full bg-gradient-primary p-1">
@@ -315,41 +318,157 @@ const About = () => {
       {/* Why AIHI */}
       <section className="py-[24px]">
         <div className="container-custom">
-          <div className="text-center mb-16 fade-in-up">
+          <div className="text-center mb-16 flip-in">
             <h2 className="text-h2 font-poppins font-bold gradient-text mb-4">
               Why Choose AIHI?
             </h2>
-            <p className="text-body text-muted-foreground max-w-2xl mx-auto">
-              Three pillars that set us apart in the competitive technology landscape
+            <p className="text-body text-muted-foreground max-w-3xl mx-auto">
+              Our unique journey from education to staffing to consulting has given us unparalleled insights into what businesses truly need
             </p>
           </div>
           
-          <div className="grid grid-cols-3 gap-8">
-            {[{
-            icon: BookOpen,
-            title: "Domain Expertise",
-            desc: "Deep industry knowledge combined with cutting-edge technical skills across multiple sectors and technologies."
-          }, {
-            icon: TrendingUp,
-            title: "Outcome-Driven",
-            desc: "Results-focused approach with measurable KPIs and clear success metrics for every engagement."
-          }, {
-            icon: Lock,
-            title: "Secure & Compliant",
-            desc: "Enterprise-grade security standards and regulatory compliance built into every solution we deliver."
-          }].map((pillar, index) => <Card key={index} className="glass-card p-8 text-center hover-lift card-tilt fade-in-up" style={{
-            animationDelay: `${index * 0.1}s`
-          }}>
-                <div className="inline-flex p-4 rounded-2xl bg-gradient-accent mb-6">
-                  <pillar.icon className="w-8 h-8 text-white" />
+          <div className="grid grid-cols-2 gap-12 mb-16">
+            {/* Left Column - Educational Foundation */}
+            <div className="space-y-8 slide-in-left">
+              <Card className="glass-card p-8 hover-lift">
+                <div className="flex items-start gap-6">
+                  <div className="p-4 rounded-2xl bg-gradient-primary">
+                    <GraduationCap className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-h3 font-poppins font-bold gradient-text mb-3">
+                      Educational Excellence
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      Our roots in Oracle training mean we understand technology from the ground up. We don't just implement solutions - we educate and empower your team.
+                    </p>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-neon-purple"></div>
+                        <span>Comprehensive knowledge transfer</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-neon-purple"></div>
+                        <span>Hands-on training programs</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-neon-purple"></div>
+                        <span>Long-term skill development</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <h3 className="text-h3 font-poppins font-bold gradient-text mb-4">
-                  {pillar.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {pillar.desc}
+              </Card>
+              
+              <Card className="glass-card p-8 hover-lift">
+                <div className="flex items-start gap-6">
+                  <div className="p-4 rounded-2xl bg-gradient-accent">
+                    <Users className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-h3 font-poppins font-bold gradient-text mb-3">
+                      Talent Intelligence
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      Years in IT staffing taught us what makes great tech teams. We help you not just build solutions, but build the right team culture.
+                    </p>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-neon-teal"></div>
+                        <span>Team dynamics optimization</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-neon-teal"></div>
+                        <span>Skill gap analysis</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-neon-teal"></div>
+                        <span>Leadership development</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </Card>
+            </div>
+            
+            {/* Right Column - Strategic Advantage */}
+            <div className="space-y-8 slide-in-right" style={{ animationDelay: '0.3s' }}>
+              <Card className="glass-card p-8 hover-lift">
+                <div className="flex items-start gap-6">
+                  <div className="p-4 rounded-2xl bg-gradient-primary">
+                    <Brain className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-h3 font-poppins font-bold gradient-text mb-3">
+                      Strategic Thinking
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      Our consulting evolution means we see the bigger picture. Every technical decision aligns with your business objectives.
+                    </p>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-neon-purple"></div>
+                        <span>Business-technology alignment</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-neon-purple"></div>
+                        <span>ROI-focused implementations</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-neon-purple"></div>
+                        <span>Scalable architecture design</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </Card>
+              
+              <Card className="glass-card p-8 hover-lift">
+                <div className="flex items-start gap-6">
+                  <div className="p-4 rounded-2xl bg-gradient-accent">
+                    <Target className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-h3 font-poppins font-bold gradient-text mb-3">
+                      Proven Results
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      Our multi-domain experience delivers solutions that work in the real world, not just in theory.
+                    </p>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-neon-teal"></div>
+                        <span>Industry-tested methodologies</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-neon-teal"></div>
+                        <span>Measurable success metrics</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-neon-teal"></div>
+                        <span>Continuous improvement focus</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </div>
+          
+          {/* Bottom CTA */}
+          <div className="text-center zoom-in" style={{ animationDelay: '0.6s' }}>
+            <div className="inline-flex items-center gap-4 p-6 glass-card rounded-2xl">
+              <Sparkles className="w-8 h-8 text-neon-purple" />
+              <div>
+                <h4 className="font-poppins font-bold text-foreground mb-1">
+                  Ready to Experience the AIHI Difference?
+                </h4>
+                <p className="text-muted-foreground text-sm">
+                  Let our unique journey become your competitive advantage
                 </p>
-              </Card>)}
+              </div>
+              <ArrowRight className="w-6 h-6 text-neon-teal" />
+            </div>
           </div>
         </div>
       </section>
@@ -357,7 +476,7 @@ const About = () => {
       {/* CTA Banner */}
       <section className="py-section relative">
         <div className="absolute inset-0 bg-gradient-primary opacity-90"></div>
-        <div className="container-custom relative z-10 text-center fade-in-up">
+        <div className="container-custom relative z-10 text-center zoom-in">
           <div className="max-w-4xl mx-auto">
             <Sparkles className="w-16 h-16 mx-auto mb-6 text-white" />
             <h2 className="text-h2 font-poppins font-bold text-white mb-4">
