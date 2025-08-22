@@ -174,17 +174,23 @@ const About = () => {
           </ScrollAnimation>
           
           <div className="relative">
-            {/* Journey Timeline */}
+            {/* Journey Timeline with connecting segments */}
             <div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-full max-w-4xl">
-              <div className="relative flex items-center justify-between">
-                {/* Journey Line */}
-                <div className="absolute inset-0 flex items-center">
-                  <div className="w-full h-1 bg-gradient-primary rounded-full"></div>
-                </div>
-                {/* Journey Dots */}
-                <div className="relative z-10 w-6 h-6 bg-gradient-primary rounded-full border-4 border-background shadow-glow-primary"></div>
-                <div className="relative z-10 w-6 h-6 bg-gradient-primary rounded-full border-4 border-background shadow-glow-primary"></div>
-                <div className="relative z-10 w-6 h-6 bg-gradient-primary rounded-full border-4 border-background shadow-glow-primary"></div>
+              <div className="relative flex items-center justify-between px-16">
+                {/* First milestone dot */}
+                <div className="relative z-10 w-4 h-4 bg-gradient-primary rounded-full border-2 border-background shadow-glow-primary"></div>
+                
+                {/* First connecting line */}
+                <div className="flex-1 mx-8 h-0.5 bg-gradient-primary rounded-full"></div>
+                
+                {/* Second milestone dot */}
+                <div className="relative z-10 w-4 h-4 bg-gradient-primary rounded-full border-2 border-background shadow-glow-primary"></div>
+                
+                {/* Second connecting line */}
+                <div className="flex-1 mx-8 h-0.5 bg-gradient-primary rounded-full"></div>
+                
+                {/* Third milestone dot */}
+                <div className="relative z-10 w-4 h-4 bg-gradient-primary rounded-full border-2 border-background shadow-glow-primary"></div>
               </div>
             </div>
             <div className="grid grid-cols-3 gap-8 relative z-20">
