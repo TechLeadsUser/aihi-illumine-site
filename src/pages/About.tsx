@@ -516,49 +516,7 @@ const About = () => {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-card-border py-[24px]">
-        <div className="container-custom py-[2px]">
-          <div className="grid grid-cols-4 gap-8 mb-12">
-            <div>
-              <h4 className="font-poppins font-bold text-foreground mb-4">Company</h4>
-              <div className="space-y-3 text-muted-foreground">
-                <div>About Us</div>
-                <div>Services</div>
-                <div>Industries</div>
-                <div>Careers</div>
-                <div>Contact</div>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-poppins font-bold text-foreground mb-4">Resources</h4>
-              <div className="space-y-3 text-muted-foreground">
-                <div>Blog</div>
-                <div>News</div>
-                <div>Insights</div>
-                <div>Events</div>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-poppins font-bold text-foreground mb-4">Legal</h4>
-              <div className="space-y-3 text-muted-foreground">
-                <div>Privacy Policy</div>
-                <div>Responsible Disclosure</div>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-poppins font-bold text-foreground mb-4">Connect</h4>
-              <div className="flex gap-4">
-                <div className="p-2 glass-card rounded-lg hover:bg-gradient-primary transition-all duration-300 cursor-pointer">
-                  <LinkedinIcon className="w-5 h-5 text-foreground" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="pt-8 border-t border-card-border text-center text-muted-foreground">
-            © 2025 AIHI. All Rights Reserved.
-          </div>
-        </div>
-      </footer>
+      
     </div>;
 };
 export default About;
