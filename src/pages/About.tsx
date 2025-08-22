@@ -176,7 +176,7 @@ const About = () => {
             <div className="grid grid-cols-3 gap-8 relative z-10">
               {[{
               icon: BookOpen,
-              title: "Edutech",
+              title: "Edtech",
               subtitle: "Empowering Careers Through Learning",
               desc: "We began our journey as an EdTech company, providing comprehensive Oracle training classes for students and working professionals. Our mission was to bridge the skills gap by offering high-quality, industry-relevant Oracle database training that helped individuals upskill and advance their careers in the competitive technology landscape."
             }, {
