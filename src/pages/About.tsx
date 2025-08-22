@@ -9,30 +9,30 @@ import itConsultingLaptop from "@/assets/it-consulting-laptop.jpg";
 const About = () => {
   return <div className="min-h-screen bg-gradient-hero text-foreground">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center overflow-hidden px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-gradient-neural opacity-30"></div>
-        <div className="container-custom relative z-10 grid grid-cols-12 gap-8 items-center">
-          <div className="col-span-7 space-y-8 fade-in-up">
-            <h1 className="text-h1 font-poppins font-bold gradient-text leading-tight">
+        <div className="container-custom relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <div className="lg:col-span-7 space-y-6 lg:space-y-8 fade-in-up text-center lg:text-left">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-poppins font-bold gradient-text leading-tight">
               Where Intelligence Meets Innovation
             </h1>
-            <p className="text-body text-muted-foreground leading-relaxed max-w-2xl">
+            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0">
               Transforming businesses through cutting-edge AI solutions and strategic IT consulting. 
               We bridge the gap between technology potential and business reality.
             </p>
-            <div className="flex gap-4">
-              <Button variant="gradient" size="lg" className="fade-in-up-delay-1">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <Button variant="gradient" size="lg" className="fade-in-up-delay-1 w-full sm:w-auto">
                 Start Your Journey
                 <ArrowRight className="w-5 h-5" />
               </Button>
-              <Button variant="hero-outline" size="lg" className="fade-in-up-delay-2">
+              <Button variant="hero-outline" size="lg" className="fade-in-up-delay-2 w-full sm:w-auto">
                 Explore Solutions
               </Button>
             </div>
           </div>
-          <div className="col-span-5 flex justify-center fade-in-up-delay-3">
+          <div className="lg:col-span-5 flex justify-center fade-in-up-delay-3 order-first lg:order-last">
             <div className="relative">
-              <img src={heroAiBrain} alt="AI Brain Innovation" className="w-full max-w-lg rounded-2xl parallax-float neon-glow" />
+              <img src={heroAiBrain} alt="AI Brain Innovation" className="w-full max-w-xs sm:max-w-md lg:max-w-lg rounded-2xl parallax-float neon-glow" />
               
             </div>
           </div>
@@ -40,9 +40,9 @@ const About = () => {
       </section>
 
       {/* Key Highlights */}
-      <section className="relative py-[24px]">
+      <section className="relative py-12 lg:py-24 px-4 sm:px-6 lg:px-8">
         <div className="container-custom">
-          <div className="grid grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
             {[{
             icon: Clock,
             stat: "12+",
@@ -60,12 +60,12 @@ const About = () => {
             stat: "Global",
             label: "Delivery Model"
           }].map((item, index) => <ScrollAnimation key={index} animation="fade-up" delay={index * 100}>
-              <Card className="glass-card p-8 text-center hover-lift">
-                <item.icon className="w-12 h-12 mx-auto mb-4 text-neon-blue" />
-                <div className="text-3xl font-poppins font-bold gradient-text-green mb-2">
+              <Card className="glass-card p-4 sm:p-6 lg:p-8 text-center hover-lift">
+                <item.icon className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mx-auto mb-3 lg:mb-4 text-neon-blue" />
+                <div className="text-xl sm:text-2xl lg:text-3xl font-poppins font-bold gradient-text-green mb-1 lg:mb-2">
                   {item.stat}
                 </div>
-                <div className="text-muted-foreground">{item.label}</div>
+                <div className="text-xs sm:text-sm lg:text-base text-muted-foreground">{item.label}</div>
               </Card>
             </ScrollAnimation>)}
           </div>
@@ -73,23 +73,23 @@ const About = () => {
       </section>
 
       {/* Who We Are */}
-      <section className="relative py-[24px]">
+      <section className="relative py-12 lg:py-24 px-4 sm:px-6 lg:px-8">
         <div className="container-custom">
-          <div className="grid grid-cols-12 gap-12 items-center">
-            <ScrollAnimation animation="slide-left" className="col-span-6 relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <ScrollAnimation animation="slide-left" className="relative order-2 lg:order-1">
               <img src={neuralPattern} alt="Neural Network Pattern" className="w-full rounded-2xl neon-glow-green" />
               <div className="absolute inset-0 bg-gradient-accent opacity-10 rounded-2xl"></div>
             </ScrollAnimation>
-            <ScrollAnimation animation="slide-right" delay={200} className="col-span-6 space-y-8">
-              <h2 className="text-h2 font-poppins font-bold gradient-text">
+            <ScrollAnimation animation="slide-right" delay={200} className="space-y-6 lg:space-y-8 order-1 lg:order-2">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-poppins font-bold gradient-text text-center lg:text-left">
                 Who We Are
               </h2>
-              <p className="text-body text-muted-foreground leading-relaxed">
+              <p className="text-base lg:text-lg text-muted-foreground leading-relaxed text-center lg:text-left">
                 A forward-thinking technology consultancy that specializes in AI implementation, 
                 digital transformation, and strategic IT solutions. We combine deep technical 
                 expertise with business acumen to deliver measurable outcomes.
               </p>
-              <div className="space-y-6">
+              <div className="space-y-4 lg:space-y-6">
                 {[{
                 icon: Shield,
                 title: "Secure by Design",
@@ -102,15 +102,15 @@ const About = () => {
                 icon: Compass,
                 title: "Outcome-First Delivery",
                 desc: "Results-driven project execution"
-              }].map((item, index) => <ScrollAnimation key={index} animation="fade-up" delay={400 + index * 100} className="flex items-start gap-4">
-                  <div className="p-3 glass-card rounded-lg">
-                    <item.icon className="w-6 h-6 text-neon-purple" />
+              }].map((item, index) => <ScrollAnimation key={index} animation="fade-up" delay={400 + index * 100} className="flex items-start gap-3 lg:gap-4">
+                  <div className="p-2 lg:p-3 glass-card rounded-lg flex-shrink-0">
+                    <item.icon className="w-5 h-5 lg:w-6 lg:h-6 text-neon-purple" />
                   </div>
-                  <div>
-                    <h4 className="font-poppins font-semibold text-foreground mb-1">
+                  <div className="flex-1">
+                    <h4 className="font-poppins font-semibold text-foreground mb-1 text-sm lg:text-base">
                       {item.title}
                     </h4>
-                    <p className="text-muted-foreground">{item.desc}</p>
+                    <p className="text-muted-foreground text-sm lg:text-base">{item.desc}</p>
                   </div>
                 </ScrollAnimation>)}
               </div>
@@ -120,9 +120,9 @@ const About = () => {
       </section>
 
       {/* Vision Mission Values */}
-      <section className="py-[24px]">
+      <section className="py-12 lg:py-24 px-4 sm:px-6 lg:px-8">
         <div className="container-custom">
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {[{
             icon: Telescope,
             title: "Vision",
@@ -139,14 +139,14 @@ const About = () => {
             content: "Innovation, integrity, and excellence drive everything we do. We build lasting partnerships through transparent communication, continuous learning, and unwavering commitment to client success.",
             color: "neon-cyan"
           }].map((item, index) => <ScrollAnimation key={index} animation="scale-in" delay={index * 200}>
-              <Card className="glass-card p-8 hover-lift text-center">
-                <div className={`inline-flex p-4 rounded-2xl glass-card mb-6 text-${item.color}`}>
-                  <item.icon className="w-8 h-8" />
+              <Card className="glass-card p-6 lg:p-8 hover-lift text-center h-full flex flex-col">
+                <div className={`inline-flex p-3 lg:p-4 rounded-2xl glass-card mb-4 lg:mb-6 text-${item.color}`}>
+                  <item.icon className="w-6 h-6 lg:w-8 lg:h-8" />
                 </div>
-                <h3 className="text-h3 font-poppins font-bold gradient-text mb-4">
+                <h3 className="text-xl lg:text-2xl font-poppins font-bold gradient-text mb-3 lg:mb-4">
                   {item.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-sm lg:text-base text-muted-foreground leading-relaxed flex-1">
                   {item.content}
                 </p>
               </Card>
@@ -156,20 +156,20 @@ const About = () => {
       </section>
 
       {/* Our Journey */}
-      <section className="relative py-[24px]">
+      <section className="relative py-12 lg:py-24 px-4 sm:px-6 lg:px-8">
         <div className="container-custom">
-          <ScrollAnimation animation="fade-up" className="text-center mb-16">
-            <h2 className="text-h2 font-poppins font-bold gradient-text mb-4">
+          <ScrollAnimation animation="fade-up" className="text-center mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-poppins font-bold gradient-text mb-4">
               Our Journey
             </h2>
-            <p className="text-body text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
               From humble beginnings to industry leadership, our evolution reflects our commitment to innovation and excellence in transforming businesses through technology.
             </p>
           </ScrollAnimation>
           
           <div className="relative">
-            {/* Journey Timeline with connecting segments */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-full max-w-4xl">
+            {/* Journey Timeline - Hidden on mobile, shown on desktop */}
+            <div className="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-full max-w-4xl">
               <div className="relative flex items-center justify-between px-16">
                 {/* First milestone dot */}
                 <div className="relative z-10 w-4 h-4 bg-gradient-primary rounded-full border-2 border-background shadow-glow-primary"></div>
@@ -187,7 +187,7 @@ const About = () => {
                 <div className="relative z-10 w-4 h-4 bg-gradient-primary rounded-full border-2 border-background shadow-glow-primary"></div>
               </div>
             </div>
-            <div className="grid grid-cols-3 gap-8 relative z-20">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 relative z-20">
               {[{
               icon: BookOpen,
               title: "Edtech",
@@ -204,17 +204,17 @@ const About = () => {
               subtitle: "Strategic Technology Partnership",
               desc: "Today, we have evolved into a full-service IT consulting firm, combining our corporate training expertise and staffing insights with strategic technology consulting. We help organizations implement robust IT solutions, optimize their technology infrastructure, and develop comprehensive digital strategies that drive business growth and operational excellence."
             }].map((milestone, index) => <ScrollAnimation key={index} animation={index % 2 === 0 ? 'slide-left' : 'slide-right'} delay={index * 300}>
-                <Card className="glass-card p-8 text-center hover-lift">
-                  <div className="inline-flex p-4 rounded-2xl bg-gradient-primary mb-6">
-                    <milestone.icon className="w-8 h-8 text-white" />
+                <Card className="glass-card p-6 lg:p-8 text-center hover-lift h-full flex flex-col">
+                  <div className="inline-flex p-3 lg:p-4 rounded-2xl bg-gradient-primary mb-4 lg:mb-6">
+                    <milestone.icon className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
                   </div>
-                  <h4 className="font-poppins font-bold text-foreground mb-2 text-lg">
+                  <h4 className="font-poppins font-bold text-foreground mb-2 text-base lg:text-lg">
                     {milestone.title}
                   </h4>
-                  <div className="text-neon-blue font-medium mb-4 text-sm">
+                  <div className="text-neon-blue font-medium mb-3 lg:mb-4 text-xs lg:text-sm">
                     {milestone.subtitle}
                   </div>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-xs lg:text-sm leading-relaxed flex-1">
                     {milestone.desc}
                   </p>
                 </Card>
@@ -225,27 +225,27 @@ const About = () => {
       </section>
 
       {/* What We Do */}
-      <section className="py-[24px]">
+      <section className="py-12 lg:py-24 px-4 sm:px-6 lg:px-8">
         <div className="container-custom">
-          <ScrollAnimation animation="fade-up" className="text-center mb-16">
-            <h2 className="text-h2 font-poppins font-bold gradient-text mb-4">
+          <ScrollAnimation animation="fade-up" className="text-center mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-poppins font-bold gradient-text mb-4">
               What We Do
             </h2>
-            <p className="text-body text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
               Comprehensive technology solutions tailored to your business needs
             </p>
           </ScrollAnimation>
           
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             <ScrollAnimation animation="slide-left">
-              <Card className="glass-card p-8 hover-lift py-[24px]">
-                <div className="flex items-start gap-6">
-                  <img src={itStaffingTeam} alt="IT Staffing Team" className="w-24 h-24 rounded-xl object-cover neon-glow" />
-                  <div className="flex-1">
-                    <h3 className="text-h3 font-poppins font-bold gradient-text mb-4">
+              <Card className="glass-card p-6 lg:p-8 hover-lift h-full">
+                <div className="flex flex-col sm:flex-row items-start gap-4 lg:gap-6">
+                  <img src={itStaffingTeam} alt="IT Staffing Team" className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl object-cover neon-glow flex-shrink-0 mx-auto sm:mx-0" />
+                  <div className="flex-1 text-center sm:text-left">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-poppins font-bold gradient-text mb-3 lg:mb-4">
                       IT Staffing
                     </h3>
-                    <ul className="space-y-2 text-muted-foreground mb-6">
+                    <ul className="space-y-1 lg:space-y-2 text-muted-foreground text-sm lg:text-base">
                       <li>• Expert talent acquisition and placement</li>
                       <li>• Contract and permanent staffing solutions</li>
                       <li>• Specialized tech skill matching</li>
@@ -256,14 +256,14 @@ const About = () => {
             </ScrollAnimation>
             
             <ScrollAnimation animation="slide-right" delay={300}>
-              <Card className="glass-card p-8 hover-lift py-[24px]">
-                <div className="flex items-start gap-6">
-                  <img src={itConsultingLaptop} alt="IT Consulting" className="w-24 h-24 rounded-xl object-cover neon-glow" />
-                  <div className="flex-1">
-                    <h3 className="text-h3 font-poppins font-bold gradient-text mb-4">
+              <Card className="glass-card p-6 lg:p-8 hover-lift h-full">
+                <div className="flex flex-col sm:flex-row items-start gap-4 lg:gap-6">
+                  <img src={itConsultingLaptop} alt="IT Consulting" className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl object-cover neon-glow flex-shrink-0 mx-auto sm:mx-0" />
+                  <div className="flex-1 text-center sm:text-left">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-poppins font-bold gradient-text mb-3 lg:mb-4">
                       IT Consulting
                     </h3>
-                    <ul className="space-y-2 text-muted-foreground mb-6">
+                    <ul className="space-y-1 lg:space-y-2 text-muted-foreground text-sm lg:text-base">
                       <li>• AI implementation and strategy</li>
                       <li>• Digital transformation roadmaps</li>
                       <li>• Technology architecture design</li>
@@ -277,18 +277,18 @@ const About = () => {
       </section>
 
       {/* Leadership */}
-      <section className="py-[24px]">
+      <section className="py-12 lg:py-24 px-4 sm:px-6 lg:px-8">
         <div className="container-custom">
-          <ScrollAnimation animation="fade-up" className="text-center mb-16">
-            <h2 className="text-h2 font-poppins font-bold gradient-text mb-4">
+          <ScrollAnimation animation="fade-up" className="text-center mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-poppins font-bold gradient-text mb-4">
               Leadership Team
             </h2>
-            <p className="text-body text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
               Visionary leaders driving innovation and excellence
             </p>
           </ScrollAnimation>
           
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {[{
             name: "Krishna",
             role: "Chief Executive Officer",
@@ -305,24 +305,24 @@ const About = () => {
             bio: "Technical architect and AI specialist with deep expertise in enterprise solution design and implementation.",
             image: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=400&h=400&fit=crop&crop=face"
           }].map((leader, index) => <ScrollAnimation key={index} animation="scale-in" delay={index * 200}>
-              <Card className="glass-card p-6 text-center hover-lift group">
-                <div className="relative inline-block mb-6">
-                  <div className="w-24 h-24 rounded-full bg-gradient-primary p-1">
+              <Card className="glass-card p-6 text-center hover-lift group h-full flex flex-col">
+                <div className="relative inline-block mb-4 lg:mb-6">
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-primary p-1">
                     <img src={leader.image} alt={leader.name} className="w-full h-full rounded-full object-cover" />
                   </div>
                   <div className="absolute -bottom-2 -right-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
                     <div className="p-2 bg-gradient-primary rounded-full">
-                      <LinkedinIcon className="w-4 h-4 text-white" />
+                      <LinkedinIcon className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                     </div>
                   </div>
                 </div>
-                <h4 className="font-poppins font-bold text-foreground mb-1">
+                <h4 className="font-poppins font-bold text-foreground mb-1 text-base lg:text-lg">
                   {leader.name}
                 </h4>
-                <div className="text-neon-blue font-medium mb-3">
+                <div className="text-neon-blue font-medium mb-3 text-sm lg:text-base">
                   {leader.role}
                 </div>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-xs lg:text-sm leading-relaxed flex-1">
                   {leader.bio}
                 </p>
               </Card>
@@ -332,43 +332,43 @@ const About = () => {
       </section>
 
       {/* Why AIHI */}
-      <section className="py-[24px]">
+      <section className="py-12 lg:py-24 px-4 sm:px-6 lg:px-8">
         <div className="container-custom">
-          <ScrollAnimation animation="fade-up" className="text-center mb-16">
-            <h2 className="text-h2 font-poppins font-bold gradient-text mb-4">
+          <ScrollAnimation animation="fade-up" className="text-center mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-poppins font-bold gradient-text mb-4">
               Why Choose AIHI?
             </h2>
-            <p className="text-body text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
               Our unique journey from corporate education to staffing to consulting has given us unparalleled insights into what businesses truly need
             </p>
           </ScrollAnimation>
           
-          <div className="grid grid-cols-2 gap-12 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 mb-12 lg:mb-16">
             {/* Left Column - Educational Foundation */}
-            <ScrollAnimation animation="slide-left" className="space-y-8">
-              <Card className="glass-card p-8 hover-lift">
-                <div className="flex items-start gap-6">
-                  <div className="p-4 rounded-2xl bg-gradient-primary">
-                    <GraduationCap className="w-8 h-8 text-white" />
+            <ScrollAnimation animation="slide-left" className="space-y-6 lg:space-y-8">
+              <Card className="glass-card p-6 lg:p-8 hover-lift">
+                <div className="flex flex-col sm:flex-row items-start gap-4 lg:gap-6">
+                  <div className="p-3 lg:p-4 rounded-2xl bg-gradient-primary flex-shrink-0 mx-auto sm:mx-0">
+                    <GraduationCap className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
                   </div>
-                  <div>
-                    <h3 className="text-h3 font-poppins font-bold gradient-text mb-3">
+                  <div className="flex-1 text-center sm:text-left">
+                    <h3 className="text-lg lg:text-xl font-poppins font-bold gradient-text mb-3">
                       Corporate Training Excellence
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed mb-4">
+                    <p className="text-muted-foreground leading-relaxed mb-4 text-sm lg:text-base">
                       Our roots in Oracle corporate training mean we understand technology from the ground up. We don't just implement solutions - we educate and empower your organization's teams.
                     </p>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-neon-purple"></div>
+                    <ul className="space-y-2 text-xs lg:text-sm">
+                      <li className="flex items-center gap-2 justify-center sm:justify-start">
+                        <div className="w-1.5 h-1.5 rounded-full bg-neon-purple flex-shrink-0"></div>
                         <span>Corporate knowledge transfer</span>
                       </li>
-                      <li className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-neon-purple"></div>
+                      <li className="flex items-center gap-2 justify-center sm:justify-start">
+                        <div className="w-1.5 h-1.5 rounded-full bg-neon-purple flex-shrink-0"></div>
                         <span>Enterprise training programs</span>
                       </li>
-                      <li className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-neon-purple"></div>
+                      <li className="flex items-center gap-2 justify-center sm:justify-start">
+                        <div className="w-1.5 h-1.5 rounded-full bg-neon-purple flex-shrink-0"></div>
                         <span>Organizational skill development</span>
                       </li>
                     </ul>
@@ -376,29 +376,29 @@ const About = () => {
                 </div>
               </Card>
               
-              <Card className="glass-card p-8 hover-lift">
-                <div className="flex items-start gap-6">
-                  <div className="p-4 rounded-2xl bg-gradient-accent">
-                    <Users className="w-8 h-8 text-white" />
+              <Card className="glass-card p-6 lg:p-8 hover-lift">
+                <div className="flex flex-col sm:flex-row items-start gap-4 lg:gap-6">
+                  <div className="p-3 lg:p-4 rounded-2xl bg-gradient-accent flex-shrink-0 mx-auto sm:mx-0">
+                    <Users className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
                   </div>
-                  <div>
-                    <h3 className="text-h3 font-poppins font-bold gradient-text mb-3">
+                  <div className="flex-1 text-center sm:text-left">
+                    <h3 className="text-lg lg:text-xl font-poppins font-bold gradient-text mb-3">
                       Talent Intelligence
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed mb-4">
+                    <p className="text-muted-foreground leading-relaxed mb-4 text-sm lg:text-base">
                       Years in IT staffing taught us what makes great tech teams. We help you not just build solutions, but build the right team culture.
                     </p>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-neon-teal"></div>
+                    <ul className="space-y-2 text-xs lg:text-sm">
+                      <li className="flex items-center gap-2 justify-center sm:justify-start">
+                        <div className="w-1.5 h-1.5 rounded-full bg-neon-teal flex-shrink-0"></div>
                         <span>Team dynamics optimization</span>
                       </li>
-                      <li className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-neon-teal"></div>
+                      <li className="flex items-center gap-2 justify-center sm:justify-start">
+                        <div className="w-1.5 h-1.5 rounded-full bg-neon-teal flex-shrink-0"></div>
                         <span>Skill gap analysis</span>
                       </li>
-                      <li className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-neon-teal"></div>
+                      <li className="flex items-center gap-2 justify-center sm:justify-start">
+                        <div className="w-1.5 h-1.5 rounded-full bg-neon-teal flex-shrink-0"></div>
                         <span>Leadership development</span>
                       </li>
                     </ul>
@@ -408,30 +408,30 @@ const About = () => {
             </ScrollAnimation>
             
             {/* Right Column - Strategic Advantage */}
-            <ScrollAnimation animation="slide-right" delay={300} className="space-y-8">
-              <Card className="glass-card p-8 hover-lift">
-                <div className="flex items-start gap-6">
-                  <div className="p-4 rounded-2xl bg-gradient-primary">
-                    <Brain className="w-8 h-8 text-white" />
+            <ScrollAnimation animation="slide-right" delay={300} className="space-y-6 lg:space-y-8">
+              <Card className="glass-card p-6 lg:p-8 hover-lift">
+                <div className="flex flex-col sm:flex-row items-start gap-4 lg:gap-6">
+                  <div className="p-3 lg:p-4 rounded-2xl bg-gradient-primary flex-shrink-0 mx-auto sm:mx-0">
+                    <Brain className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
                   </div>
-                  <div>
-                    <h3 className="text-h3 font-poppins font-bold gradient-text mb-3">
+                  <div className="flex-1 text-center sm:text-left">
+                    <h3 className="text-lg lg:text-xl font-poppins font-bold gradient-text mb-3">
                       Strategic Thinking
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed mb-4">
+                    <p className="text-muted-foreground leading-relaxed mb-4 text-sm lg:text-base">
                       Our consulting evolution means we see the bigger picture. Every technical decision aligns with your business objectives.
                     </p>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-neon-purple"></div>
+                    <ul className="space-y-2 text-xs lg:text-sm">
+                      <li className="flex items-center gap-2 justify-center sm:justify-start">
+                        <div className="w-1.5 h-1.5 rounded-full bg-neon-purple flex-shrink-0"></div>
                         <span>Business-technology alignment</span>
                       </li>
-                      <li className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-neon-purple"></div>
+                      <li className="flex items-center gap-2 justify-center sm:justify-start">
+                        <div className="w-1.5 h-1.5 rounded-full bg-neon-purple flex-shrink-0"></div>
                         <span>ROI-focused implementations</span>
                       </li>
-                      <li className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-neon-purple"></div>
+                      <li className="flex items-center gap-2 justify-center sm:justify-start">
+                        <div className="w-1.5 h-1.5 rounded-full bg-neon-purple flex-shrink-0"></div>
                         <span>Scalable architecture design</span>
                       </li>
                     </ul>
@@ -439,29 +439,29 @@ const About = () => {
                 </div>
               </Card>
               
-              <Card className="glass-card p-8 hover-lift">
-                <div className="flex items-start gap-6">
-                  <div className="p-4 rounded-2xl bg-gradient-accent">
-                    <Target className="w-8 h-8 text-white" />
+              <Card className="glass-card p-6 lg:p-8 hover-lift">
+                <div className="flex flex-col sm:flex-row items-start gap-4 lg:gap-6">
+                  <div className="p-3 lg:p-4 rounded-2xl bg-gradient-accent flex-shrink-0 mx-auto sm:mx-0">
+                    <Target className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
                   </div>
-                  <div>
-                    <h3 className="text-h3 font-poppins font-bold gradient-text mb-3">
+                  <div className="flex-1 text-center sm:text-left">
+                    <h3 className="text-lg lg:text-xl font-poppins font-bold gradient-text mb-3">
                       Proven Results
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed mb-4">
+                    <p className="text-muted-foreground leading-relaxed mb-4 text-sm lg:text-base">
                       Our multi-domain experience delivers solutions that work in the real world, not just in theory.
                     </p>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-neon-teal"></div>
+                    <ul className="space-y-2 text-xs lg:text-sm">
+                      <li className="flex items-center gap-2 justify-center sm:justify-start">
+                        <div className="w-1.5 h-1.5 rounded-full bg-neon-teal flex-shrink-0"></div>
                         <span>Industry-tested methodologies</span>
                       </li>
-                      <li className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-neon-teal"></div>
+                      <li className="flex items-center gap-2 justify-center sm:justify-start">
+                        <div className="w-1.5 h-1.5 rounded-full bg-neon-teal flex-shrink-0"></div>
                         <span>Measurable success metrics</span>
                       </li>
-                      <li className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-neon-teal"></div>
+                      <li className="flex items-center gap-2 justify-center sm:justify-start">
+                        <div className="w-1.5 h-1.5 rounded-full bg-neon-teal flex-shrink-0"></div>
                         <span>Continuous improvement focus</span>
                       </li>
                     </ul>
@@ -473,42 +473,40 @@ const About = () => {
           
           {/* Bottom CTA */}
           <ScrollAnimation animation="scale-in" delay={600} className="text-center">
-            <div className="inline-flex items-center gap-4 p-6 glass-card rounded-2xl">
-              <Sparkles className="w-8 h-8 text-neon-purple" />
-              <div>
-                <h4 className="font-poppins font-bold text-foreground mb-1">
+            <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-4 sm:p-6 glass-card rounded-2xl max-w-md sm:max-w-none mx-auto">
+              <Sparkles className="w-6 h-6 sm:w-8 sm:h-8 text-neon-purple flex-shrink-0" />
+              <div className="text-center sm:text-left">
+                <h4 className="font-poppins font-bold text-foreground mb-1 text-sm sm:text-base">
                   Ready to Experience the AIHI Difference?
                 </h4>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-xs sm:text-sm">
                   Let our unique journey become your competitive advantage
                 </p>
               </div>
-              
             </div>
           </ScrollAnimation>
         </div>
       </section>
 
       {/* CTA Banner */}
-      <section className="py-section relative">
+      <section className="py-16 sm:py-20 lg:py-24 relative px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-gradient-primary opacity-90"></div>
         <ScrollAnimation animation="scale-in" className="container-custom relative z-10 text-center">
           <div className="max-w-4xl mx-auto">
-            
-            <h2 className="font-poppins font-bold text-white mb-4 text-2xl">
+            <h2 className="font-poppins font-bold text-white mb-4 text-xl sm:text-2xl lg:text-3xl">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-white/90 mb-8 leading-relaxed text-sm">
+            <p className="text-white/90 mb-6 lg:mb-8 leading-relaxed text-sm sm:text-base lg:text-lg max-w-2xl mx-auto">
               Join hundreds of forward-thinking organizations that trust AIHI to drive their digital transformation journey. 
               Let's explore how we can accelerate your success.
             </p>
-            <div className="flex gap-4 justify-center">
-              <Button variant="hero-outline" size="lg" className="text-sm font-semibold">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button variant="hero-outline" size="lg" className="text-sm font-semibold w-full sm:w-auto">
                 Schedule Consultation
               </Button>
-              <Button variant="gradient" size="lg" className="text-sm font-medium">
+              <Button variant="gradient" size="lg" className="text-sm font-medium w-full sm:w-auto">
                 Contact Sales Team
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </Button>
             </div>
           </div>
