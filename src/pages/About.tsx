@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { ScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Brain, Users, Target, Shield, Compass, Telescope, Rocket, Heart, Clock, BarChart3, Handshake, Globe, BookOpen, GraduationCap, Cog, Laptop, TrendingUp, Lock, LinkedinIcon, ArrowRight, Sparkles } from "lucide-react";
 import heroAiBrain from "@/assets/hero-ai-brain.jpg";
 import neuralPattern from "@/assets/neural-pattern.jpg";
@@ -45,30 +46,30 @@ const About = () => {
             {[{
             icon: Clock,
             stat: "12+",
-            label: "Years Experience",
-            delay: "fade-in-up-delay-1"
+            label: "Years Experience"
           }, {
             icon: BarChart3,
             stat: "300+",
-            label: "Projects Delivered",
-            delay: "fade-in-up-delay-2"
+            label: "Projects Delivered"
           }, {
             icon: Handshake,
             stat: "98%",
-            label: "Client Retention",
-            delay: "fade-in-up-delay-3"
+            label: "Client Retention"
           }, {
             icon: Globe,
             stat: "Global",
-            label: "Delivery Model",
-            delay: "fade-in-up-delay-4"
-          }].map((item, index) => <Card key={index} className={`glass-card p-8 text-center hover-lift card-tilt ${item.delay}`}>
+            label: "Delivery Model"
+          }].map((item, index) => (
+            <ScrollAnimation key={index} animation="fade-up" delay={index * 100}>
+              <Card className="glass-card p-8 text-center hover-lift">
                 <item.icon className="w-12 h-12 mx-auto mb-4 text-neon-blue" />
                 <div className="text-3xl font-poppins font-bold gradient-text mb-2">
                   {item.stat}
                 </div>
                 <div className="text-muted-foreground">{item.label}</div>
-              </Card>)}
+              </Card>
+            </ScrollAnimation>
+          ))}
           </div>
         </div>
       </section>
@@ -77,11 +78,11 @@ const About = () => {
       <section className="relative py-[24px]">
         <div className="container-custom">
           <div className="grid grid-cols-12 gap-12 items-center">
-            <div className="col-span-6 relative slide-in-left">
+            <ScrollAnimation animation="slide-left" className="col-span-6 relative">
               <img src={neuralPattern} alt="Neural Network Pattern" className="w-full rounded-2xl neon-glow-green" />
               <div className="absolute inset-0 bg-gradient-accent opacity-10 rounded-2xl"></div>
-            </div>
-            <div className="col-span-6 space-y-8 slide-in-right">
+            </ScrollAnimation>
+            <ScrollAnimation animation="slide-right" delay={200} className="col-span-6 space-y-8">
               <h2 className="text-h2 font-poppins font-bold gradient-text">
                 Who We Are
               </h2>
@@ -103,19 +104,21 @@ const About = () => {
                 icon: Compass,
                 title: "Outcome-First Delivery",
                 desc: "Results-driven project execution"
-              }].map((item, index) => <div key={index} className="flex items-start gap-4 fade-in-up-delay-1">
-                    <div className="p-3 glass-card rounded-lg">
-                      <item.icon className="w-6 h-6 text-neon-purple" />
-                    </div>
-                    <div>
-                      <h4 className="font-poppins font-semibold text-foreground mb-1">
-                        {item.title}
-                      </h4>
-                      <p className="text-muted-foreground">{item.desc}</p>
-                    </div>
-                  </div>)}
+              }].map((item, index) => (
+                <ScrollAnimation key={index} animation="fade-up" delay={400 + index * 100} className="flex items-start gap-4">
+                  <div className="p-3 glass-card rounded-lg">
+                    <item.icon className="w-6 h-6 text-neon-purple" />
+                  </div>
+                  <div>
+                    <h4 className="font-poppins font-semibold text-foreground mb-1">
+                      {item.title}
+                    </h4>
+                    <p className="text-muted-foreground">{item.desc}</p>
+                  </div>
+                </ScrollAnimation>
+              ))}
               </div>
-            </div>
+            </ScrollAnimation>
           </div>
         </div>
       </section>
@@ -128,23 +131,20 @@ const About = () => {
             icon: Telescope,
             title: "Vision",
             content: "To be the global leader in AI-driven business transformation, empowering organizations to achieve unprecedented growth through intelligent technology solutions.",
-            color: "neon-purple",
-            animation: "flip-in"
+            color: "neon-purple"
           }, {
             icon: Rocket,
             title: "Mission",
             content: "We accelerate business success by delivering innovative AI and IT solutions that transform challenges into competitive advantages through strategic consulting and implementation.",
-            color: "neon-teal",
-            animation: "zoom-in"
+            color: "neon-teal"
           }, {
             icon: Heart,
             title: "Values",
             content: "Innovation, integrity, and excellence drive everything we do. We build lasting partnerships through transparent communication, continuous learning, and unwavering commitment to client success.",
-            color: "neon-cyan",
-            animation: "rotate-in"
-          }].map((item, index) => <Card key={index} className={`glass-card p-8 hover-lift card-tilt ${item.animation} text-center`} style={{
-            animationDelay: `${index * 0.2}s`
-          }}>
+            color: "neon-cyan"
+          }].map((item, index) => (
+            <ScrollAnimation key={index} animation="scale-in" delay={index * 200}>
+              <Card className="glass-card p-8 hover-lift text-center">
                 <div className={`inline-flex p-4 rounded-2xl glass-card mb-6 text-${item.color}`}>
                   <item.icon className="w-8 h-8" />
                 </div>
@@ -154,7 +154,9 @@ const About = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   {item.content}
                 </p>
-              </Card>)}
+              </Card>
+            </ScrollAnimation>
+          ))}
           </div>
         </div>
       </section>
@@ -162,14 +164,14 @@ const About = () => {
       {/* Our Journey */}
       <section className="relative py-[24px]">
         <div className="container-custom">
-          <div className="text-center mb-16 zoom-in">
+          <ScrollAnimation animation="fade-up" className="text-center mb-16">
             <h2 className="text-h2 font-poppins font-bold gradient-text mb-4">
               Our Journey
             </h2>
             <p className="text-body text-muted-foreground max-w-2xl mx-auto">
               From humble beginnings to industry leadership, our evolution reflects our commitment to innovation and excellence in transforming businesses through technology.
             </p>
-          </div>
+          </ScrollAnimation>
           
           <div className="relative">
             <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-primary rounded-full pulse-slow"></div>
@@ -189,9 +191,9 @@ const About = () => {
               title: "IT Consulting",
               subtitle: "Strategic Technology Partnership",
               desc: "Today, we have evolved into a full-service IT consulting firm, combining our corporate training expertise and staffing insights with strategic technology consulting. We help organizations implement robust IT solutions, optimize their technology infrastructure, and develop comprehensive digital strategies that drive business growth and operational excellence."
-            }].map((milestone, index) => <Card key={index} className={`glass-card p-8 text-center hover-lift ${index % 2 === 0 ? 'slide-in-left' : 'slide-in-right'}`} style={{
-              animationDelay: `${index * 0.3}s`
-            }}>
+            }].map((milestone, index) => (
+              <ScrollAnimation key={index} animation={index % 2 === 0 ? 'slide-left' : 'slide-right'} delay={index * 300}>
+                <Card className="glass-card p-8 text-center hover-lift">
                   <div className="inline-flex p-4 rounded-2xl bg-gradient-primary mb-6">
                     <milestone.icon className="w-8 h-8 text-white" />
                   </div>
@@ -204,7 +206,9 @@ const About = () => {
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {milestone.desc}
                   </p>
-                </Card>)}
+                </Card>
+              </ScrollAnimation>
+            ))}
             </div>
           </div>
         </div>
@@ -213,49 +217,51 @@ const About = () => {
       {/* What We Do */}
       <section className="py-[24px]">
         <div className="container-custom">
-          <div className="text-center mb-16 flip-in">
+          <ScrollAnimation animation="fade-up" className="text-center mb-16">
             <h2 className="text-h2 font-poppins font-bold gradient-text mb-4">
               What We Do
             </h2>
             <p className="text-body text-muted-foreground max-w-2xl mx-auto">
               Comprehensive technology solutions tailored to your business needs
             </p>
-          </div>
+          </ScrollAnimation>
           
           <div className="grid grid-cols-2 gap-8">
-            <Card className="glass-card p-8 hover-lift slide-in-left py-[24px]">
-              <div className="flex items-start gap-6">
-                <img src={itStaffingTeam} alt="IT Staffing Team" className="w-24 h-24 rounded-xl object-cover neon-glow" />
-                <div className="flex-1">
-                  <h3 className="text-h3 font-poppins font-bold gradient-text mb-4">
-                    IT Staffing
-                  </h3>
-                  <ul className="space-y-2 text-muted-foreground mb-6">
-                    <li>• Expert talent acquisition and placement</li>
-                    <li>• Contract and permanent staffing solutions</li>
-                    <li>• Specialized tech skill matching</li>
-                  </ul>
-                  
+            <ScrollAnimation animation="slide-left">
+              <Card className="glass-card p-8 hover-lift py-[24px]">
+                <div className="flex items-start gap-6">
+                  <img src={itStaffingTeam} alt="IT Staffing Team" className="w-24 h-24 rounded-xl object-cover neon-glow" />
+                  <div className="flex-1">
+                    <h3 className="text-h3 font-poppins font-bold gradient-text mb-4">
+                      IT Staffing
+                    </h3>
+                    <ul className="space-y-2 text-muted-foreground mb-6">
+                      <li>• Expert talent acquisition and placement</li>
+                      <li>• Contract and permanent staffing solutions</li>
+                      <li>• Specialized tech skill matching</li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-            </Card>
+              </Card>
+            </ScrollAnimation>
             
-            <Card className="glass-card p-8 hover-lift slide-in-right py-[24px]" style={{ animationDelay: '0.3s' }}>
-              <div className="flex items-start gap-6">
-                <img src={itConsultingLaptop} alt="IT Consulting" className="w-24 h-24 rounded-xl object-cover neon-glow" />
-                <div className="flex-1">
-                  <h3 className="text-h3 font-poppins font-bold gradient-text mb-4">
-                    IT Consulting
-                  </h3>
-                  <ul className="space-y-2 text-muted-foreground mb-6">
-                    <li>• AI implementation and strategy</li>
-                    <li>• Digital transformation roadmaps</li>
-                    <li>• Technology architecture design</li>
-                  </ul>
-                  
+            <ScrollAnimation animation="slide-right" delay={300}>
+              <Card className="glass-card p-8 hover-lift py-[24px]">
+                <div className="flex items-start gap-6">
+                  <img src={itConsultingLaptop} alt="IT Consulting" className="w-24 h-24 rounded-xl object-cover neon-glow" />
+                  <div className="flex-1">
+                    <h3 className="text-h3 font-poppins font-bold gradient-text mb-4">
+                      IT Consulting
+                    </h3>
+                    <ul className="space-y-2 text-muted-foreground mb-6">
+                      <li>• AI implementation and strategy</li>
+                      <li>• Digital transformation roadmaps</li>
+                      <li>• Technology architecture design</li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-            </Card>
+              </Card>
+            </ScrollAnimation>
           </div>
         </div>
       </section>
@@ -263,14 +269,14 @@ const About = () => {
       {/* Leadership */}
       <section className="py-[24px]">
         <div className="container-custom">
-          <div className="text-center mb-16 rotate-in">
+          <ScrollAnimation animation="fade-up" className="text-center mb-16">
             <h2 className="text-h2 font-poppins font-bold gradient-text mb-4">
               Leadership Team
             </h2>
             <p className="text-body text-muted-foreground max-w-2xl mx-auto">
               Visionary leaders driving innovation and excellence
             </p>
-          </div>
+          </ScrollAnimation>
           
           <div className="grid grid-cols-3 gap-8">
             {[{
@@ -288,9 +294,9 @@ const About = () => {
             role: "Principal Consultant",
             bio: "Technical architect and AI specialist with deep expertise in enterprise solution design and implementation.",
             image: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=400&h=400&fit=crop&crop=face"
-            }].map((leader, index) => <Card key={index} className="glass-card p-6 text-center hover-lift zoom-in group" style={{
-            animationDelay: `${index * 0.2}s`
-          }}>
+            }].map((leader, index) => (
+            <ScrollAnimation key={index} animation="scale-in" delay={index * 200}>
+              <Card className="glass-card p-6 text-center hover-lift group">
                 <div className="relative inline-block mb-6">
                   <div className="w-24 h-24 rounded-full bg-gradient-primary p-1">
                     <img src={leader.image} alt={leader.name} className="w-full h-full rounded-full object-cover" />
@@ -310,7 +316,9 @@ const About = () => {
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   {leader.bio}
                 </p>
-              </Card>)}
+              </Card>
+            </ScrollAnimation>
+          ))}
           </div>
         </div>
       </section>
@@ -318,18 +326,18 @@ const About = () => {
       {/* Why AIHI */}
       <section className="py-[24px]">
         <div className="container-custom">
-          <div className="text-center mb-16 flip-in">
+          <ScrollAnimation animation="fade-up" className="text-center mb-16">
             <h2 className="text-h2 font-poppins font-bold gradient-text mb-4">
               Why Choose AIHI?
             </h2>
             <p className="text-body text-muted-foreground max-w-3xl mx-auto">
               Our unique journey from corporate education to staffing to consulting has given us unparalleled insights into what businesses truly need
             </p>
-          </div>
+          </ScrollAnimation>
           
           <div className="grid grid-cols-2 gap-12 mb-16">
             {/* Left Column - Educational Foundation */}
-            <div className="space-y-8 slide-in-left">
+            <ScrollAnimation animation="slide-left" className="space-y-8">
               <Card className="glass-card p-8 hover-lift">
                 <div className="flex items-start gap-6">
                   <div className="p-4 rounded-2xl bg-gradient-primary">
@@ -389,10 +397,10 @@ const About = () => {
                   </div>
                 </div>
               </Card>
-            </div>
+            </ScrollAnimation>
             
             {/* Right Column - Strategic Advantage */}
-            <div className="space-y-8 slide-in-right" style={{ animationDelay: '0.3s' }}>
+            <ScrollAnimation animation="slide-right" delay={300} className="space-y-8">
               <Card className="glass-card p-8 hover-lift">
                 <div className="flex items-start gap-6">
                   <div className="p-4 rounded-2xl bg-gradient-primary">
@@ -452,11 +460,11 @@ const About = () => {
                   </div>
                 </div>
               </Card>
-            </div>
+            </ScrollAnimation>
           </div>
           
           {/* Bottom CTA */}
-          <div className="text-center zoom-in" style={{ animationDelay: '0.6s' }}>
+          <ScrollAnimation animation="scale-in" delay={600} className="text-center">
             <div className="inline-flex items-center gap-4 p-6 glass-card rounded-2xl">
               <Sparkles className="w-8 h-8 text-neon-purple" />
               <div>
@@ -469,14 +477,14 @@ const About = () => {
               </div>
               <ArrowRight className="w-6 h-6 text-neon-teal" />
             </div>
-          </div>
+          </ScrollAnimation>
         </div>
       </section>
 
       {/* CTA Banner */}
       <section className="py-section relative">
         <div className="absolute inset-0 bg-gradient-primary opacity-90"></div>
-        <div className="container-custom relative z-10 text-center zoom-in">
+        <ScrollAnimation animation="scale-in" className="container-custom relative z-10 text-center">
           <div className="max-w-4xl mx-auto">
             <Sparkles className="w-16 h-16 mx-auto mb-6 text-white" />
             <h2 className="text-h2 font-poppins font-bold text-white mb-4">
@@ -496,7 +504,7 @@ const About = () => {
               </Button>
             </div>
           </div>
-        </div>
+        </ScrollAnimation>
       </section>
 
       {/* Footer */}
