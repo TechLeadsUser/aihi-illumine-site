@@ -178,17 +178,17 @@ const About = () => {
               icon: BookOpen,
               title: "Edtech",
               subtitle: "Empowering Careers Through Learning",
-              desc: "We began our journey as an EdTech company, providing comprehensive Oracle training classes for students and working professionals. Our mission was to bridge the skills gap by offering high-quality, industry-relevant Oracle database training that helped individuals upskill and advance their careers in the competitive technology landscape."
+              desc: "We began our journey as an EdTech company, providing comprehensive Oracle training programs for corporate clients. Our mission was to bridge the skills gap by offering high-quality, industry-relevant Oracle database training that helped organizations upskill their workforce and advance their teams' capabilities in the competitive technology landscape."
             }, {
               icon: Users,
               title: "IT Staffing",
               subtitle: "Connecting Talent with Opportunity",
-              desc: "Building on our deep understanding of technology skills and market demands from our Oracle training experience, we naturally expanded into IT staffing. We leveraged our network of trained professionals and industry connections to provide specialized recruitment services, helping companies find the right talent while supporting professionals in finding their ideal career opportunities."
+              desc: "Building on our deep understanding of technology skills and market demands from our Oracle corporate training experience, we naturally expanded into IT staffing. We leveraged our network of trained corporate professionals and industry connections to provide specialized recruitment services, helping companies find the right talent while supporting professionals in finding their ideal career opportunities."
             }, {
               icon: Cog,
               title: "IT Consulting",
               subtitle: "Strategic Technology Partnership",
-              desc: "Today, we have evolved into a full-service IT consulting firm, combining our educational expertise and staffing insights with strategic technology consulting. We help organizations implement robust IT solutions, optimize their technology infrastructure, and develop comprehensive digital strategies that drive business growth and operational excellence."
+              desc: "Today, we have evolved into a full-service IT consulting firm, combining our corporate training expertise and staffing insights with strategic technology consulting. We help organizations implement robust IT solutions, optimize their technology infrastructure, and develop comprehensive digital strategies that drive business growth and operational excellence."
             }].map((milestone, index) => <Card key={index} className={`glass-card p-8 text-center hover-lift ${index % 2 === 0 ? 'slide-in-left' : 'slide-in-right'}`} style={{
               animationDelay: `${index * 0.3}s`
             }}>
@@ -323,7 +323,7 @@ const About = () => {
               Why Choose AIHI?
             </h2>
             <p className="text-body text-muted-foreground max-w-3xl mx-auto">
-              Our unique journey from education to staffing to consulting has given us unparalleled insights into what businesses truly need
+              Our unique journey from corporate education to staffing to consulting has given us unparalleled insights into what businesses truly need
             </p>
           </div>
           
@@ -337,23 +337,23 @@ const About = () => {
                   </div>
                   <div>
                     <h3 className="text-h3 font-poppins font-bold gradient-text mb-3">
-                      Educational Excellence
+                      Corporate Training Excellence
                     </h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      Our roots in Oracle training mean we understand technology from the ground up. We don't just implement solutions - we educate and empower your team.
+                      Our roots in Oracle corporate training mean we understand technology from the ground up. We don't just implement solutions - we educate and empower your organization's teams.
                     </p>
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-neon-purple"></div>
-                        <span>Comprehensive knowledge transfer</span>
+                        <span>Corporate knowledge transfer</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-neon-purple"></div>
-                        <span>Hands-on training programs</span>
+                        <span>Enterprise training programs</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-neon-purple"></div>
-                        <span>Long-term skill development</span>
+                        <span>Organizational skill development</span>
                       </li>
                     </ul>
                   </div>
