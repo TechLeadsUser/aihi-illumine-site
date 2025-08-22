@@ -174,8 +174,20 @@ const About = () => {
           </ScrollAnimation>
           
           <div className="relative">
-            <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-primary rounded-full pulse-slow"></div>
-            <div className="grid grid-cols-3 gap-8 relative z-10">
+            {/* Journey Timeline */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 w-full max-w-4xl">
+              <div className="relative flex items-center justify-between">
+                {/* Journey Line */}
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full h-1 bg-gradient-primary rounded-full"></div>
+                </div>
+                {/* Journey Dots */}
+                <div className="relative z-10 w-6 h-6 bg-gradient-primary rounded-full border-4 border-background shadow-glow-primary"></div>
+                <div className="relative z-10 w-6 h-6 bg-gradient-primary rounded-full border-4 border-background shadow-glow-primary"></div>
+                <div className="relative z-10 w-6 h-6 bg-gradient-primary rounded-full border-4 border-background shadow-glow-primary"></div>
+              </div>
+            </div>
+            <div className="grid grid-cols-3 gap-8 relative z-20">
               {[{
               icon: BookOpen,
               title: "Edtech",
