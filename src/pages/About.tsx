@@ -490,7 +490,7 @@ const About = () => {
       </section>
 
       {/* CTA Banner */}
-      <section className="py-section relative">
+      <section className="relative h-[220px] flex items-center">
         <div className="absolute inset-0 bg-gradient-primary opacity-90"></div>
         <ScrollAnimation animation="scale-in" className="container-custom relative z-10 text-center">
           <div className="max-w-4xl mx-auto">
