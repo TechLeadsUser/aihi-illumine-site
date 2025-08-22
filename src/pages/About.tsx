@@ -33,7 +33,7 @@ const About = () => {
           <div className="col-span-5 flex justify-center fade-in-up-delay-3">
             <div className="relative">
               <img src={heroAiBrain} alt="AI Brain Innovation" className="w-full max-w-lg rounded-2xl parallax-float neon-glow" />
-              <div className="absolute inset-0 bg-gradient-primary opacity-20 rounded-2xl"></div>
+              
             </div>
           </div>
         </div>
