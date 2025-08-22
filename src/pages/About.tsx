@@ -62,7 +62,7 @@ const About = () => {
           }].map((item, index) => <ScrollAnimation key={index} animation="fade-up" delay={index * 100}>
               <Card className="glass-card p-8 text-center hover-lift">
                 <item.icon className="w-12 h-12 mx-auto mb-4 text-neon-blue" />
-                <div className="text-3xl font-poppins font-bold gradient-text mb-2">
+                <div className="text-3xl font-poppins font-bold gradient-text-green mb-2">
                   {item.stat}
                 </div>
                 <div className="text-muted-foreground">{item.label}</div>
