@@ -59,8 +59,7 @@ const About = () => {
             icon: Globe,
             stat: "Global",
             label: "Delivery Model"
-          }].map((item, index) => (
-            <ScrollAnimation key={index} animation="fade-up" delay={index * 100}>
+          }].map((item, index) => <ScrollAnimation key={index} animation="fade-up" delay={index * 100}>
               <Card className="glass-card p-8 text-center hover-lift">
                 <item.icon className="w-12 h-12 mx-auto mb-4 text-neon-blue" />
                 <div className="text-3xl font-poppins font-bold gradient-text mb-2">
@@ -68,8 +67,7 @@ const About = () => {
                 </div>
                 <div className="text-muted-foreground">{item.label}</div>
               </Card>
-            </ScrollAnimation>
-          ))}
+            </ScrollAnimation>)}
           </div>
         </div>
       </section>
@@ -104,8 +102,7 @@ const About = () => {
                 icon: Compass,
                 title: "Outcome-First Delivery",
                 desc: "Results-driven project execution"
-              }].map((item, index) => (
-                <ScrollAnimation key={index} animation="fade-up" delay={400 + index * 100} className="flex items-start gap-4">
+              }].map((item, index) => <ScrollAnimation key={index} animation="fade-up" delay={400 + index * 100} className="flex items-start gap-4">
                   <div className="p-3 glass-card rounded-lg">
                     <item.icon className="w-6 h-6 text-neon-purple" />
                   </div>
@@ -115,8 +112,7 @@ const About = () => {
                     </h4>
                     <p className="text-muted-foreground">{item.desc}</p>
                   </div>
-                </ScrollAnimation>
-              ))}
+                </ScrollAnimation>)}
               </div>
             </ScrollAnimation>
           </div>
@@ -142,8 +138,7 @@ const About = () => {
             title: "Values",
             content: "Innovation, integrity, and excellence drive everything we do. We build lasting partnerships through transparent communication, continuous learning, and unwavering commitment to client success.",
             color: "neon-cyan"
-          }].map((item, index) => (
-            <ScrollAnimation key={index} animation="scale-in" delay={index * 200}>
+          }].map((item, index) => <ScrollAnimation key={index} animation="scale-in" delay={index * 200}>
               <Card className="glass-card p-8 hover-lift text-center">
                 <div className={`inline-flex p-4 rounded-2xl glass-card mb-6 text-${item.color}`}>
                   <item.icon className="w-8 h-8" />
@@ -155,8 +150,7 @@ const About = () => {
                   {item.content}
                 </p>
               </Card>
-            </ScrollAnimation>
-          ))}
+            </ScrollAnimation>)}
           </div>
         </div>
       </section>
@@ -209,8 +203,7 @@ const About = () => {
               title: "IT Consulting",
               subtitle: "Strategic Technology Partnership",
               desc: "Today, we have evolved into a full-service IT consulting firm, combining our corporate training expertise and staffing insights with strategic technology consulting. We help organizations implement robust IT solutions, optimize their technology infrastructure, and develop comprehensive digital strategies that drive business growth and operational excellence."
-            }].map((milestone, index) => (
-              <ScrollAnimation key={index} animation={index % 2 === 0 ? 'slide-left' : 'slide-right'} delay={index * 300}>
+            }].map((milestone, index) => <ScrollAnimation key={index} animation={index % 2 === 0 ? 'slide-left' : 'slide-right'} delay={index * 300}>
                 <Card className="glass-card p-8 text-center hover-lift">
                   <div className="inline-flex p-4 rounded-2xl bg-gradient-primary mb-6">
                     <milestone.icon className="w-8 h-8 text-white" />
@@ -225,8 +218,7 @@ const About = () => {
                     {milestone.desc}
                   </p>
                 </Card>
-              </ScrollAnimation>
-            ))}
+              </ScrollAnimation>)}
             </div>
           </div>
         </div>
@@ -312,8 +304,7 @@ const About = () => {
             role: "Principal Consultant",
             bio: "Technical architect and AI specialist with deep expertise in enterprise solution design and implementation.",
             image: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=400&h=400&fit=crop&crop=face"
-            }].map((leader, index) => (
-            <ScrollAnimation key={index} animation="scale-in" delay={index * 200}>
+          }].map((leader, index) => <ScrollAnimation key={index} animation="scale-in" delay={index * 200}>
               <Card className="glass-card p-6 text-center hover-lift group">
                 <div className="relative inline-block mb-6">
                   <div className="w-24 h-24 rounded-full bg-gradient-primary p-1">
@@ -335,8 +326,7 @@ const About = () => {
                   {leader.bio}
                 </p>
               </Card>
-            </ScrollAnimation>
-          ))}
+            </ScrollAnimation>)}
           </div>
         </div>
       </section>
@@ -493,7 +483,7 @@ const About = () => {
                   Let our unique journey become your competitive advantage
                 </p>
               </div>
-              <ArrowRight className="w-6 h-6 text-neon-teal" />
+              
             </div>
           </ScrollAnimation>
         </div>
