@@ -479,34 +479,7 @@ const About = () => {
 
             {/* Measurable Outcomes & Governance */}
             <ScrollAnimation animation="slide-left" delay={500} className="">
-              <Card className="glass-card h-full flex flex-col">
-                <div className="p-4 sm:p-6 flex-1">
-                  <div className="flex items-center gap-3 mb-3 sm:mb-4">
-                    <div className="p-2 rounded-xl bg-gradient-to-br from-neon-purple/20 to-neon-blue/20">
-                      <BarChart3 className="w-5 h-5 sm:w-6 sm:h-6 text-neon-purple" />
-                    </div>
-                    <h3 className="text-base sm:text-lg lg:text-xl font-bold">Measurable Outcomes & Governance</h3>
-                  </div>
-                  
-                  <p className="text-xs sm:text-sm lg:text-base text-muted-foreground mb-4">
-                    Every engagement ties execution to business KPIs with clear controls.
-                  </p>
-                  
-                  <div className="text-xs lg:text-sm">
-                    <div className="font-semibold text-neon-purple mb-1">KPIs:</div>
-                    <ul className="space-y-1 text-muted-foreground mb-3">
-                      <li>• Adoption, cycle time, cost, reliability</li>
-                      <li>• CX/employee experience metrics</li>
-                    </ul>
-                    
-                    <div className="font-semibold text-neon-purple mb-1">Governance:</div>
-                    <ul className="space-y-1 text-muted-foreground">
-                      <li>• Weekly plans, demos, and transparent progress reporting</li>
-                      <li>• Release, security, and change governance built in</li>
-                    </ul>
-                  </div>
-                </div>
-              </Card>
+              
             </ScrollAnimation>
           </div>
           
