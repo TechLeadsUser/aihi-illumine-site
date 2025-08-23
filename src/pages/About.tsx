@@ -445,13 +445,8 @@ const About = () => {
               </Card>
             </ScrollAnimation>
 
-            {/* Measurable Outcomes & Governance */}
-            <ScrollAnimation animation="slide-left" delay={450} className="md:col-span-2 xl:col-span-1">
-              
-            </ScrollAnimation>
-
             {/* Industry Experience */}
-            <ScrollAnimation animation="scale-in" delay={600} className="md:col-span-2 xl:col-span-1">
+            <ScrollAnimation animation="scale-in" delay={400} className="">
               <Card className="glass-card p-6 lg:p-8 hover-lift h-full">
                 <div className="p-3 lg:p-4 rounded-2xl bg-gradient-primary mb-4 lg:mb-6 inline-block">
                   <Globe className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
@@ -476,6 +471,42 @@ const About = () => {
                     <div className="font-semibold text-neon-teal mb-1">Expertise:</div>
                     <ul className="space-y-1 text-muted-foreground">
                       <li>• Domain-aware playbooks and compliance readiness</li>
+                    </ul>
+                  </div>
+                </div>
+              </Card>
+            </ScrollAnimation>
+
+            {/* Measurable Outcomes & Governance */}
+            <ScrollAnimation animation="slide-left" delay={500} className="">
+              <Card className="glass-card p-6 lg:p-8 hover-lift h-full">
+                <div className="p-3 lg:p-4 rounded-2xl bg-gradient-primary mb-4 lg:mb-6 inline-block">
+                  <BarChart3 className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
+                </div>
+                <h3 className="text-lg lg:text-xl font-poppins font-bold gradient-text mb-3 lg:mb-4">
+                  Measurable Outcomes & Governance
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-4 text-sm lg:text-base">
+                  Every engagement ties execution to business KPIs with clear controls.
+                </p>
+                <div className="space-y-2 lg:space-y-3">
+                  <div className="text-xs lg:text-sm">
+                    <div className="font-semibold text-neon-purple mb-1">KPIs:</div>
+                    <ul className="space-y-1 text-muted-foreground">
+                      <li>• Adoption, cycle time, cost, reliability</li>
+                      <li>• CX/employee experience</li>
+                    </ul>
+                  </div>
+                  <div className="text-xs lg:text-sm">
+                    <div className="font-semibold text-neon-blue mb-1">Reporting:</div>
+                    <ul className="space-y-1 text-muted-foreground">
+                      <li>• Weekly plans, demos, and transparent progress reporting</li>
+                    </ul>
+                  </div>
+                  <div className="text-xs lg:text-sm">
+                    <div className="font-semibold text-neon-teal mb-1">Governance:</div>
+                    <ul className="space-y-1 text-muted-foreground">
+                      <li>• Release, security, and change governance built in</li>
                     </ul>
                   </div>
                 </div>
