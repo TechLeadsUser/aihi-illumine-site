@@ -140,12 +140,14 @@ const About = () => {
             color: "neon-cyan"
           }].map((item, index) => <ScrollAnimation key={index} animation="scale-in" delay={index * 200}>
               <Card className="glass-card p-6 lg:p-8 hover-lift text-center h-full flex flex-col">
-                <div className={`w-12 h-12 lg:w-16 lg:h-16 flex items-center justify-center rounded-2xl glass-card mb-4 lg:mb-6 text-${item.color}`}>
-                  <item.icon className="w-6 h-6 lg:w-8 lg:h-8" />
+                <div className="flex items-center gap-4 mb-4 lg:mb-6 justify-center">
+                  <div className={`w-12 h-12 lg:w-16 lg:h-16 flex items-center justify-center rounded-2xl glass-card text-${item.color}`}>
+                    <item.icon className="w-6 h-6 lg:w-8 lg:h-8" />
+                  </div>
+                  <h3 className="text-xl lg:text-2xl font-poppins font-bold gradient-text">
+                    {item.title}
+                  </h3>
                 </div>
-                <h3 className="text-xl lg:text-2xl font-poppins font-bold gradient-text mb-3 lg:mb-4">
-                  {item.title}
-                </h3>
                 <p className="text-sm lg:text-base text-muted-foreground leading-relaxed flex-1">
                   {item.content}
                 </p>
