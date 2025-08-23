@@ -424,7 +424,7 @@ const About = () => {
                 </p>
                 <div className="space-y-2 lg:space-y-3">
                   <div className="text-xs lg:text-sm">
-                    <div className="font-semibold text-neon-purple mb-1">Strategy:</div>
+                    <div className="font-semibold text-neon-purple mb-1 bg-[#848409]/0">Strategy:</div>
                     <ul className="space-y-1 text-muted-foreground">
                       <li>• Roadmaps, solution architecture, and value cases</li>
                     </ul>
