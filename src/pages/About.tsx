@@ -339,7 +339,7 @@ const About = () => {
               Why Choose AIHI?
             </h2>
             <p className="text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
-              Specialists in Oracle, SAP, Microsoft, Salesforce, ServiceNow delivering measurable outcomes with accountable delivery.
+              Specialists in Oracle, SAP, Microsoft, Salesforce, and ServiceNow, we accelerate IT consulting with AI-powered efficiency and governance.
             </p>
           </ScrollAnimation>
           
@@ -354,22 +354,19 @@ const About = () => {
                   Deep Platform Expertise
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4 text-sm lg:text-base">
-                  Certified consultants across leading ERP, CX, and ITSM suites for greenfield, upgrades, and optimizations.
+                  Certified consultants across enterprise applications with proven implementation frameworks.
                 </p>
                 <div className="space-y-2 lg:space-y-3">
                   <div className="text-xs lg:text-sm">
                     <div className="font-semibold text-neon-blue mb-1">Platform Expertise:</div>
                     <ul className="space-y-1 text-muted-foreground">
-                      <li>• Oracle Cloud/EBS</li>
-                      <li>• SAP S/4HANA & BTP/CPI</li>
-                      <li>• Microsoft Dynamics 365 & Azure</li>
-                      <li>• Salesforce Clouds</li>
-                      <li>• ServiceNow ITSM/HRSD/CSM</li>
+                      <li>• Oracle Cloud/EBS · SAP S/4HANA & BTP/CPI</li>
+                      <li>• Microsoft Dynamics 365 & Azure · Salesforce Clouds · ServiceNow ITSM/HRSD/CSM</li>
                     </ul>
                   </div>
                   <div className="text-xs lg:text-sm">
                     <div className="font-semibold text-neon-purple mb-1">Accelerators:</div>
-                    <p className="text-muted-foreground">Best-practice templates and proven accelerators</p>
+                    <p className="text-muted-foreground">Pre-built accelerators, templates, and best practices</p>
                   </div>
                 </div>
               </Card>
@@ -382,28 +379,28 @@ const About = () => {
                   <Brain className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
                 </div>
                 <h3 className="text-lg lg:text-xl font-poppins font-bold gradient-text mb-3 lg:mb-4">
-                  AI-Driven IT Solutions
+                  AI-Driven Delivery
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4 text-sm lg:text-base">
-                  We blend platform-native AI with data science to unlock real business value.
+                  We embed AI into our consulting lifecycle to reduce timelines and ensure quality.
                 </p>
                 <div className="space-y-2 lg:space-y-3">
                   <div className="text-xs lg:text-sm">
-                    <div className="font-semibold text-neon-teal mb-1">AI Capabilities:</div>
+                    <div className="font-semibold text-neon-teal mb-1">Automation:</div>
                     <ul className="space-y-1 text-muted-foreground">
-                      <li>• Predictive insights, anomaly alerts, and AI copilots embedded in workflows</li>
+                      <li>• Automated impact analysis, testing, and defect detection</li>
                     </ul>
                   </div>
                   <div className="text-xs lg:text-sm">
-                    <div className="font-semibold text-neon-cyan mb-1">Automation:</div>
+                    <div className="font-semibold text-neon-cyan mb-1">AI Copilots:</div>
                     <ul className="space-y-1 text-muted-foreground">
-                      <li>• Intelligent automation: chatbots, approvals, ticket triage, RPA/AIOps</li>
+                      <li>• AI copilots for faster configuration & documentation</li>
                     </ul>
                   </div>
                   <div className="text-xs lg:text-sm">
-                    <div className="font-semibold text-neon-green mb-1">Responsible AI:</div>
+                    <div className="font-semibold text-neon-green mb-1">Insights:</div>
                     <ul className="space-y-1 text-muted-foreground">
-                      <li>• Governed data, explainability, and security controls</li>
+                      <li>• Predictive insights for smoother project delivery and risk mitigation</li>
                     </ul>
                   </div>
                 </div>
@@ -417,28 +414,28 @@ const About = () => {
                   <Target className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
                 </div>
                 <h3 className="text-lg lg:text-xl font-poppins font-bold gradient-text mb-3 lg:mb-4">
-                  End-to-End Delivery
+                  End-to-End IT Consulting
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4 text-sm lg:text-base">
-                  One partner from strategy to run—advisory, build, data, and operations.
+                  Your single partner from strategy through operations.
                 </p>
                 <div className="space-y-2 lg:space-y-3">
                   <div className="text-xs lg:text-sm">
-                    <div className="font-semibold text-neon-purple mb-1 bg-[#848409]/0">Strategy:</div>
+                    <div className="font-semibold text-neon-purple mb-1">Advisory:</div>
                     <ul className="space-y-1 text-muted-foreground">
-                      <li>• Roadmaps, solution architecture, and value cases</li>
+                      <li>• roadmaps, architecture, and solution design</li>
                     </ul>
                   </div>
                   <div className="text-xs lg:text-sm">
-                    <div className="font-semibold text-neon-blue mb-1">Implementation:</div>
+                    <div className="font-semibold text-neon-blue mb-1">Delivery:</div>
                     <ul className="space-y-1 text-muted-foreground">
-                      <li>• Implementation, integrations, testing, and migration (OIC, BTP/CPI, Azure/MuleSoft/IntegrationHub)</li>
+                      <li>• implementations, migrations, integrations, customizations</li>
                     </ul>
                   </div>
                   <div className="text-xs lg:text-sm">
-                    <div className="font-semibold text-neon-teal mb-1">Operations:</div>
+                    <div className="font-semibold text-neon-teal mb-1">Managed Services:</div>
                     <ul className="space-y-1 text-muted-foreground">
-                      <li>• Managed services with SLAs, observability, and continuous improvement</li>
+                      <li>• SLAs, monitoring, and continuous optimization</li>
                     </ul>
                   </div>
                 </div>
@@ -455,21 +452,25 @@ const About = () => {
                   Measurable Outcomes & Governance
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4 text-sm lg:text-base">
-                  Every engagement ties execution to business KPIs with clear controls.
+                  We deliver projects tied directly to business outcomes with transparent governance.
                 </p>
                 <div className="space-y-2 lg:space-y-3">
                   <div className="text-xs lg:text-sm">
-                    <div className="font-semibold text-neon-purple mb-1">KPIs:</div>
+                    <div className="font-semibold text-neon-blue mb-1">KPIs:</div>
                     <ul className="space-y-1 text-muted-foreground">
-                      <li>• Adoption, cycle time, cost, reliability</li>
-                      <li>• CX/employee experience metrics</li>
+                      <li>• reduced cycle time, lower costs, improved adoption</li>
                     </ul>
                   </div>
                   <div className="text-xs lg:text-sm">
-                    <div className="font-semibold text-neon-blue mb-1">Governance:</div>
+                    <div className="font-semibold text-neon-purple mb-1">Execution:</div>
                     <ul className="space-y-1 text-muted-foreground">
-                      <li>• Weekly plans, demos, and transparent progress reporting</li>
-                      <li>• Release, security, and change governance built in</li>
+                      <li>• Agile execution with weekly demos & reporting</li>
+                    </ul>
+                  </div>
+                  <div className="text-xs lg:text-sm">
+                    <div className="font-semibold text-neon-teal mb-1">Controls:</div>
+                    <ul className="space-y-1 text-muted-foreground">
+                      <li>• Risk, compliance, and change controls built-in</li>
                     </ul>
                   </div>
                 </div>
