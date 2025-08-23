@@ -331,7 +331,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Why AIHI */}
+      {/* Why Choose AIHI */}
       <section className="py-12 lg:py-24 px-4 sm:px-6 lg:px-8">
         <div className="container-custom">
           <ScrollAnimation animation="fade-up" className="text-center mb-12 lg:mb-16">
@@ -339,131 +339,173 @@ const About = () => {
               Why Choose AIHI?
             </h2>
             <p className="text-base lg:text-lg text-muted-foreground max-w-3xl mx-auto">
-              Our unique journey from corporate education to staffing to consulting has given us unparalleled insights into what businesses truly need
+              Specialists in Oracle, SAP, Microsoft, Salesforce, ServiceNow delivering measurable outcomes with accountable delivery.
             </p>
           </ScrollAnimation>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 mb-12 lg:mb-16">
-            {/* Left Column - Educational Foundation */}
-            <ScrollAnimation animation="slide-left" className="space-y-6 lg:space-y-8">
-              <Card className="glass-card p-6 lg:p-8 hover-lift">
-                <div className="flex flex-col sm:flex-row items-start gap-4 lg:gap-6">
-                  <div className="p-3 lg:p-4 rounded-2xl bg-gradient-primary flex-shrink-0 mx-auto sm:mx-0">
-                    <GraduationCap className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
-                  </div>
-                  <div className="flex-1 text-center sm:text-left">
-                    <h3 className="text-lg lg:text-xl font-poppins font-bold gradient-text mb-3">
-                      Corporate Training Excellence
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed mb-4 text-sm lg:text-base">
-                      Our roots in Oracle corporate training mean we understand technology from the ground up. We don't just implement solutions - we educate and empower your organization's teams.
-                    </p>
-                    <ul className="space-y-2 text-xs lg:text-sm">
-                      <li className="flex items-center gap-2 justify-center sm:justify-start">
-                        <div className="w-1.5 h-1.5 rounded-full bg-neon-purple flex-shrink-0"></div>
-                        <span>Corporate knowledge transfer</span>
-                      </li>
-                      <li className="flex items-center gap-2 justify-center sm:justify-start">
-                        <div className="w-1.5 h-1.5 rounded-full bg-neon-purple flex-shrink-0"></div>
-                        <span>Enterprise training programs</span>
-                      </li>
-                      <li className="flex items-center gap-2 justify-center sm:justify-start">
-                        <div className="w-1.5 h-1.5 rounded-full bg-neon-purple flex-shrink-0"></div>
-                        <span>Organizational skill development</span>
-                      </li>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
+            {/* Deep Platform Expertise */}
+            <ScrollAnimation animation="slide-left" delay={0}>
+              <Card className="glass-card p-6 lg:p-8 hover-lift h-full">
+                <div className="p-3 lg:p-4 rounded-2xl bg-gradient-primary mb-4 lg:mb-6 inline-block">
+                  <Cog className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
+                </div>
+                <h3 className="text-lg lg:text-xl font-poppins font-bold gradient-text mb-3 lg:mb-4">
+                  Deep Platform Expertise
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-4 text-sm lg:text-base">
+                  Certified consultants across leading ERP, CX, and ITSM suites for greenfield, upgrades, and optimizations.
+                </p>
+                <div className="space-y-2 lg:space-y-3">
+                  <div className="text-xs lg:text-sm">
+                    <div className="font-semibold text-neon-blue mb-1">Platform Expertise:</div>
+                    <ul className="space-y-1 text-muted-foreground">
+                      <li>• Oracle Cloud/EBS</li>
+                      <li>• SAP S/4HANA & BTP/CPI</li>
+                      <li>• Microsoft Dynamics 365 & Azure</li>
+                      <li>• Salesforce Clouds</li>
+                      <li>• ServiceNow ITSM/HRSD/CSM</li>
                     </ul>
+                  </div>
+                  <div className="text-xs lg:text-sm">
+                    <div className="font-semibold text-neon-purple mb-1">Accelerators:</div>
+                    <p className="text-muted-foreground">Best-practice templates and proven accelerators</p>
                   </div>
                 </div>
               </Card>
-              
-              <Card className="glass-card p-6 lg:p-8 hover-lift">
-                <div className="flex flex-col sm:flex-row items-start gap-4 lg:gap-6">
-                  <div className="p-3 lg:p-4 rounded-2xl bg-gradient-accent flex-shrink-0 mx-auto sm:mx-0">
-                    <Users className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
+            </ScrollAnimation>
+
+            {/* AI-Driven IT Solutions */}
+            <ScrollAnimation animation="scale-in" delay={150}>
+              <Card className="glass-card p-6 lg:p-8 hover-lift h-full">
+                <div className="p-3 lg:p-4 rounded-2xl bg-gradient-accent mb-4 lg:mb-6 inline-block">
+                  <Brain className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
+                </div>
+                <h3 className="text-lg lg:text-xl font-poppins font-bold gradient-text mb-3 lg:mb-4">
+                  AI-Driven IT Solutions
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-4 text-sm lg:text-base">
+                  We blend platform-native AI with data science to unlock real business value.
+                </p>
+                <div className="space-y-2 lg:space-y-3">
+                  <div className="text-xs lg:text-sm">
+                    <div className="font-semibold text-neon-teal mb-1">AI Capabilities:</div>
+                    <ul className="space-y-1 text-muted-foreground">
+                      <li>• Predictive insights, anomaly alerts, and AI copilots embedded in workflows</li>
+                    </ul>
                   </div>
-                  <div className="flex-1 text-center sm:text-left">
-                    <h3 className="text-lg lg:text-xl font-poppins font-bold gradient-text mb-3">
-                      Talent Intelligence
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed mb-4 text-sm lg:text-base">
-                      Years in IT staffing taught us what makes great tech teams. We help you not just build solutions, but build the right team culture.
-                    </p>
-                    <ul className="space-y-2 text-xs lg:text-sm">
-                      <li className="flex items-center gap-2 justify-center sm:justify-start">
-                        <div className="w-1.5 h-1.5 rounded-full bg-neon-teal flex-shrink-0"></div>
-                        <span>Team dynamics optimization</span>
-                      </li>
-                      <li className="flex items-center gap-2 justify-center sm:justify-start">
-                        <div className="w-1.5 h-1.5 rounded-full bg-neon-teal flex-shrink-0"></div>
-                        <span>Skill gap analysis</span>
-                      </li>
-                      <li className="flex items-center gap-2 justify-center sm:justify-start">
-                        <div className="w-1.5 h-1.5 rounded-full bg-neon-teal flex-shrink-0"></div>
-                        <span>Leadership development</span>
-                      </li>
+                  <div className="text-xs lg:text-sm">
+                    <div className="font-semibold text-neon-cyan mb-1">Automation:</div>
+                    <ul className="space-y-1 text-muted-foreground">
+                      <li>• Intelligent automation: chatbots, approvals, ticket triage, RPA/AIOps</li>
+                    </ul>
+                  </div>
+                  <div className="text-xs lg:text-sm">
+                    <div className="font-semibold text-neon-green mb-1">Responsible AI:</div>
+                    <ul className="space-y-1 text-muted-foreground">
+                      <li>• Governed data, explainability, and security controls</li>
                     </ul>
                   </div>
                 </div>
               </Card>
             </ScrollAnimation>
-            
-            {/* Right Column - Strategic Advantage */}
-            <ScrollAnimation animation="slide-right" delay={300} className="space-y-6 lg:space-y-8">
-              <Card className="glass-card p-6 lg:p-8 hover-lift">
-                <div className="flex flex-col sm:flex-row items-start gap-4 lg:gap-6">
-                  <div className="p-3 lg:p-4 rounded-2xl bg-gradient-primary flex-shrink-0 mx-auto sm:mx-0">
-                    <Brain className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
+
+            {/* End-to-End Delivery */}
+            <ScrollAnimation animation="slide-right" delay={300}>
+              <Card className="glass-card p-6 lg:p-8 hover-lift h-full">
+                <div className="p-3 lg:p-4 rounded-2xl bg-gradient-primary mb-4 lg:mb-6 inline-block">
+                  <Target className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
+                </div>
+                <h3 className="text-lg lg:text-xl font-poppins font-bold gradient-text mb-3 lg:mb-4">
+                  End-to-End Delivery
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-4 text-sm lg:text-base">
+                  One partner from strategy to run—advisory, build, data, and operations.
+                </p>
+                <div className="space-y-2 lg:space-y-3">
+                  <div className="text-xs lg:text-sm">
+                    <div className="font-semibold text-neon-purple mb-1">Strategy:</div>
+                    <ul className="space-y-1 text-muted-foreground">
+                      <li>• Roadmaps, solution architecture, and value cases</li>
+                    </ul>
                   </div>
-                  <div className="flex-1 text-center sm:text-left">
-                    <h3 className="text-lg lg:text-xl font-poppins font-bold gradient-text mb-3">
-                      Strategic Thinking
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed mb-4 text-sm lg:text-base">
-                      Our consulting evolution means we see the bigger picture. Every technical decision aligns with your business objectives.
-                    </p>
-                    <ul className="space-y-2 text-xs lg:text-sm">
-                      <li className="flex items-center gap-2 justify-center sm:justify-start">
-                        <div className="w-1.5 h-1.5 rounded-full bg-neon-purple flex-shrink-0"></div>
-                        <span>Business-technology alignment</span>
-                      </li>
-                      <li className="flex items-center gap-2 justify-center sm:justify-start">
-                        <div className="w-1.5 h-1.5 rounded-full bg-neon-purple flex-shrink-0"></div>
-                        <span>ROI-focused implementations</span>
-                      </li>
-                      <li className="flex items-center gap-2 justify-center sm:justify-start">
-                        <div className="w-1.5 h-1.5 rounded-full bg-neon-purple flex-shrink-0"></div>
-                        <span>Scalable architecture design</span>
-                      </li>
+                  <div className="text-xs lg:text-sm">
+                    <div className="font-semibold text-neon-blue mb-1">Implementation:</div>
+                    <ul className="space-y-1 text-muted-foreground">
+                      <li>• Implementation, integrations, testing, and migration (OIC, BTP/CPI, Azure/MuleSoft/IntegrationHub)</li>
+                    </ul>
+                  </div>
+                  <div className="text-xs lg:text-sm">
+                    <div className="font-semibold text-neon-teal mb-1">Operations:</div>
+                    <ul className="space-y-1 text-muted-foreground">
+                      <li>• Managed services with SLAs, observability, and continuous improvement</li>
                     </ul>
                   </div>
                 </div>
               </Card>
-              
-              <Card className="glass-card p-6 lg:p-8 hover-lift">
-                <div className="flex flex-col sm:flex-row items-start gap-4 lg:gap-6">
-                  <div className="p-3 lg:p-4 rounded-2xl bg-gradient-accent flex-shrink-0 mx-auto sm:mx-0">
-                    <Target className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
+            </ScrollAnimation>
+
+            {/* Measurable Outcomes & Governance */}
+            <ScrollAnimation animation="slide-left" delay={450} className="md:col-span-2 xl:col-span-1">
+              <Card className="glass-card p-6 lg:p-8 hover-lift h-full">
+                <div className="p-3 lg:p-4 rounded-2xl bg-gradient-accent mb-4 lg:mb-6 inline-block">
+                  <BarChart3 className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
+                </div>
+                <h3 className="text-lg lg:text-xl font-poppins font-bold gradient-text mb-3 lg:mb-4">
+                  Measurable Outcomes & Governance
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-4 text-sm lg:text-base">
+                  Every engagement ties execution to business KPIs with clear controls.
+                </p>
+                <div className="space-y-2 lg:space-y-3">
+                  <div className="text-xs lg:text-sm">
+                    <div className="font-semibold text-neon-cyan mb-1">KPIs:</div>
+                    <ul className="space-y-1 text-muted-foreground">
+                      <li>• Adoption, cycle time, cost, reliability, CX/employee experience</li>
+                    </ul>
                   </div>
-                  <div className="flex-1 text-center sm:text-left">
-                    <h3 className="text-lg lg:text-xl font-poppins font-bold gradient-text mb-3">
-                      Proven Results
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed mb-4 text-sm lg:text-base">
-                      Our multi-domain experience delivers solutions that work in the real world, not just in theory.
-                    </p>
-                    <ul className="space-y-2 text-xs lg:text-sm">
-                      <li className="flex items-center gap-2 justify-center sm:justify-start">
-                        <div className="w-1.5 h-1.5 rounded-full bg-neon-teal flex-shrink-0"></div>
-                        <span>Industry-tested methodologies</span>
-                      </li>
-                      <li className="flex items-center gap-2 justify-center sm:justify-start">
-                        <div className="w-1.5 h-1.5 rounded-full bg-neon-teal flex-shrink-0"></div>
-                        <span>Measurable success metrics</span>
-                      </li>
-                      <li className="flex items-center gap-2 justify-center sm:justify-start">
-                        <div className="w-1.5 h-1.5 rounded-full bg-neon-teal flex-shrink-0"></div>
-                        <span>Continuous improvement focus</span>
-                      </li>
+                  <div className="text-xs lg:text-sm">
+                    <div className="font-semibold text-neon-green mb-1">Transparency:</div>
+                    <ul className="space-y-1 text-muted-foreground">
+                      <li>• Weekly plans, demos, and transparent progress reporting</li>
+                    </ul>
+                  </div>
+                  <div className="text-xs lg:text-sm">
+                    <div className="font-semibold text-neon-purple mb-1">Governance:</div>
+                    <ul className="space-y-1 text-muted-foreground">
+                      <li>• Release, security, and change governance built in</li>
+                    </ul>
+                  </div>
+                </div>
+              </Card>
+            </ScrollAnimation>
+
+            {/* Industry Experience */}
+            <ScrollAnimation animation="scale-in" delay={600} className="md:col-span-2 xl:col-span-1">
+              <Card className="glass-card p-6 lg:p-8 hover-lift h-full">
+                <div className="p-3 lg:p-4 rounded-2xl bg-gradient-primary mb-4 lg:mb-6 inline-block">
+                  <Globe className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
+                </div>
+                <h3 className="text-lg lg:text-xl font-poppins font-bold gradient-text mb-3 lg:mb-4">
+                  Industry Experience
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-4 text-sm lg:text-base">
+                  Enterprise programs delivered across regulated and high-scale sectors.
+                </p>
+                <div className="space-y-2 lg:space-y-3">
+                  <div className="text-xs lg:text-sm">
+                    <div className="font-semibold text-neon-blue mb-1">Sectors:</div>
+                    <ul className="space-y-1 text-muted-foreground">
+                      <li>• Retail, Manufacturing, Healthcare</li>
+                      <li>• Financial Services</li>
+                      <li>• Logistics & Supply Chain</li>
+                      <li>• Hi-Tech/SaaS</li>
+                    </ul>
+                  </div>
+                  <div className="text-xs lg:text-sm">
+                    <div className="font-semibold text-neon-teal mb-1">Expertise:</div>
+                    <ul className="space-y-1 text-muted-foreground">
+                      <li>• Domain-aware playbooks and compliance readiness</li>
                     </ul>
                   </div>
                 </div>
@@ -472,7 +514,7 @@ const About = () => {
           </div>
           
           {/* Bottom CTA */}
-          <ScrollAnimation animation="scale-in" delay={600} className="text-center">
+          <ScrollAnimation animation="scale-in" delay={750} className="text-center mt-12 lg:mt-16">
             <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-4 sm:p-6 glass-card rounded-2xl max-w-md sm:max-w-none mx-auto">
               <Sparkles className="w-6 h-6 sm:w-8 sm:h-8 text-neon-purple flex-shrink-0" />
               <div className="text-center sm:text-left">
@@ -480,7 +522,7 @@ const About = () => {
                   Ready to Experience the AIHI Difference?
                 </h4>
                 <p className="text-muted-foreground text-xs sm:text-sm">
-                  Let our unique journey become your competitive advantage
+                  Let our platform expertise drive your business transformation
                 </p>
               </div>
             </div>
