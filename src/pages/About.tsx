@@ -445,61 +445,28 @@ const About = () => {
               </Card>
             </ScrollAnimation>
 
-            {/* Industry Experience */}
-            <ScrollAnimation animation="scale-in" delay={400} className="">
+            {/* Measurable Outcomes & Governance */}
+            <ScrollAnimation animation="slide-left" delay={400}>
               <Card className="glass-card p-6 lg:p-8 hover-lift h-full">
                 <div className="p-3 lg:p-4 rounded-2xl bg-gradient-primary mb-4 lg:mb-6 inline-block">
-                  <Globe className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
+                  <BarChart3 className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
                 </div>
                 <h3 className="text-lg lg:text-xl font-poppins font-bold gradient-text mb-3 lg:mb-4">
-                  Industry Experience
+                  Measurable Outcomes & Governance
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4 text-sm lg:text-base">
-                  Enterprise programs delivered across regulated and high-scale sectors.
+                  Every engagement ties execution to business KPIs with clear controls.
                 </p>
                 <div className="space-y-2 lg:space-y-3">
                   <div className="text-xs lg:text-sm">
-                    <div className="font-semibold text-neon-blue mb-1">Sectors:</div>
-                    <ul className="space-y-1 text-muted-foreground">
-                      <li>• Retail, Manufacturing, Healthcare</li>
-                      <li>• Financial Services</li>
-                      <li>• Logistics & Supply Chain</li>
-                      <li>• Hi-Tech/SaaS</li>
-                    </ul>
-                  </div>
-                  <div className="text-xs lg:text-sm">
-                    <div className="font-semibold text-neon-teal mb-1">Expertise:</div>
-                    <ul className="space-y-1 text-muted-foreground">
-                      <li>• Domain-aware playbooks and compliance readiness</li>
-                    </ul>
-                  </div>
-                </div>
-              </Card>
-            </ScrollAnimation>
-
-            {/* Measurable Outcomes & Governance */}
-            <ScrollAnimation animation="slide-left" delay={500} className="">
-              <Card className="glass-card h-full flex flex-col">
-                <div className="p-4 sm:p-6 flex-1">
-                  <div className="flex items-center gap-3 mb-3 sm:mb-4">
-                    <div className="p-2 rounded-xl bg-gradient-to-br from-neon-purple/20 to-neon-blue/20">
-                      <BarChart3 className="w-5 h-5 sm:w-6 sm:h-6 text-neon-purple" />
-                    </div>
-                    <h3 className="text-base sm:text-lg lg:text-xl font-bold">Measurable Outcomes & Governance</h3>
-                  </div>
-                  
-                  <p className="text-xs sm:text-sm lg:text-base text-muted-foreground mb-4">
-                    Every engagement ties execution to business KPIs with clear controls.
-                  </p>
-                  
-                  <div className="text-xs lg:text-sm">
                     <div className="font-semibold text-neon-purple mb-1">KPIs:</div>
-                    <ul className="space-y-1 text-muted-foreground mb-3">
+                    <ul className="space-y-1 text-muted-foreground">
                       <li>• Adoption, cycle time, cost, reliability</li>
                       <li>• CX/employee experience metrics</li>
                     </ul>
-                    
-                    <div className="font-semibold text-neon-purple mb-1">Governance:</div>
+                  </div>
+                  <div className="text-xs lg:text-sm">
+                    <div className="font-semibold text-neon-blue mb-1">Governance:</div>
                     <ul className="space-y-1 text-muted-foreground">
                       <li>• Weekly plans, demos, and transparent progress reporting</li>
                       <li>• Release, security, and change governance built in</li>
