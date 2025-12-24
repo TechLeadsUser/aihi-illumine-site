@@ -6,8 +6,6 @@ import heroAiBrain from "@/assets/hero-ai-brain.jpg";
 import neuralPattern from "@/assets/neural-pattern.jpg";
 import itStaffingTeam from "@/assets/it-staffing-team.jpg";
 import itConsultingLaptop from "@/assets/it-consulting-laptop.jpg";
-import digitalMarketingWorkspace from "@/assets/digital-marketing-workspace.jpg";
-import webDevelopmentCoding from "@/assets/web-development-coding.jpg";
 const About = () => {
   return <div className="min-h-screen bg-gradient-hero text-foreground">
       {/* Hero Section */}
@@ -240,7 +238,7 @@ const About = () => {
             </p>
           </ScrollAnimation>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             <ScrollAnimation animation="slide-left">
               <Card className="glass-card p-6 lg:p-8 hover-lift h-full">
                 <div className="flex flex-col sm:flex-row items-start gap-4 lg:gap-6">
@@ -259,7 +257,7 @@ const About = () => {
               </Card>
             </ScrollAnimation>
             
-            <ScrollAnimation animation="slide-right" delay={150}>
+            <ScrollAnimation animation="slide-right" delay={300}>
               <Card className="glass-card p-6 lg:p-8 hover-lift h-full">
                 <div className="flex flex-col sm:flex-row items-start gap-4 lg:gap-6">
                   <img src={itConsultingLaptop} alt="IT Consulting" className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl object-cover neon-glow flex-shrink-0 mx-auto sm:mx-0" />
@@ -271,42 +269,6 @@ const About = () => {
                       <li>• AI implementation and strategy</li>
                       <li>• Digital transformation roadmaps</li>
                       <li>• Technology architecture design</li>
-                    </ul>
-                  </div>
-                </div>
-              </Card>
-            </ScrollAnimation>
-
-            <ScrollAnimation animation="slide-left" delay={300}>
-              <Card className="glass-card p-6 lg:p-8 hover-lift h-full">
-                <div className="flex flex-col sm:flex-row items-start gap-4 lg:gap-6">
-                  <img src={digitalMarketingWorkspace} alt="Digital Marketing" className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl object-cover neon-glow flex-shrink-0 mx-auto sm:mx-0" />
-                  <div className="flex-1 text-center sm:text-left">
-                    <h3 className="text-lg sm:text-xl lg:text-2xl font-poppins font-bold gradient-text mb-3 lg:mb-4">
-                      Digital Marketing
-                    </h3>
-                    <ul className="space-y-1 lg:space-y-2 text-muted-foreground text-sm lg:text-base">
-                      <li>• SEO and content marketing strategies</li>
-                      <li>• Social media campaign management</li>
-                      <li>• Analytics and performance optimization</li>
-                    </ul>
-                  </div>
-                </div>
-              </Card>
-            </ScrollAnimation>
-
-            <ScrollAnimation animation="slide-right" delay={450}>
-              <Card className="glass-card p-6 lg:p-8 hover-lift h-full">
-                <div className="flex flex-col sm:flex-row items-start gap-4 lg:gap-6">
-                  <img src={webDevelopmentCoding} alt="Web Development" className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl object-cover neon-glow flex-shrink-0 mx-auto sm:mx-0" />
-                  <div className="flex-1 text-center sm:text-left">
-                    <h3 className="text-lg sm:text-xl lg:text-2xl font-poppins font-bold gradient-text mb-3 lg:mb-4">
-                      Web Development
-                    </h3>
-                    <ul className="space-y-1 lg:space-y-2 text-muted-foreground text-sm lg:text-base">
-                      <li>• Custom web application development</li>
-                      <li>• Responsive design and UX optimization</li>
-                      <li>• Modern frameworks and technologies</li>
                     </ul>
                   </div>
                 </div>
